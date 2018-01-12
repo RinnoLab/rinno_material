@@ -31,7 +31,7 @@ Add it to your `INSTALLED_APPS`:
 
     INSTALLED_APPS = (
         ...
-        'rinno_material.apps.RinnoMaterialConfig',
+        'rinno_material',
         ...
     )
 
