@@ -12168,6 +12168,9 @@ main {
     margin-bottom: 10px;
     font-size: 16px; }
 
+.row1 input {
+  width: 100% !important; }
+
 .field-color input {
   width: 50px !important; }
 
