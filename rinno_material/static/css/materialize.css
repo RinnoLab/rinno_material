@@ -12204,6 +12204,10 @@ input.validate {
   .wrap #changelist-form {
     display: inline-block;
     width: 78%; }
+    .wrap #changelist-form .actions {
+      margin-right: 0px; }
+    .wrap #changelist-form .results {
+      margin-right: 0px; }
   .wrap #changelist-filter {
     position: relative;
     /*top: 00px;

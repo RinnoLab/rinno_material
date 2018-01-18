@@ -558,6 +558,12 @@ input.validate {
 #changelist-form {
 	display: inline-block;
 	width: 78%;
+	.actions {
+		margin-right: 0px;
+	}
+	.results {
+		margin-right: 0px;
+	}
 }
 #changelist-filter {
     position: relative;
