@@ -526,8 +526,12 @@ main {
 	 	font-size: 16px;	 }
 	    
 }
+.vIntegerField {
+    width: 5em;
+}
 table {
 	tr {
+		width:auto !important;
 		td {
 			width:auto !important;
 		}

@@ -12168,8 +12168,13 @@ main {
     margin-bottom: 10px;
     font-size: 16px; }
 
-table tr td {
+.vIntegerField {
+  width: 5em; }
+
+table tr {
   width: auto !important; }
+  table tr td {
+    width: auto !important; }
 
 .row1 input {
   width: 100% !important; }
