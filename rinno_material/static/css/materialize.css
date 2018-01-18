@@ -12651,6 +12651,22 @@ table tr .action-checkbox {
 .datetimeshortcuts .date-icon::before {
   content: "\E916"; }
 
+.inline-group .tabular td.original p {
+  height: 20px !important; }
+
+.selector-chosen h2 {
+  background: #79aec8;
+  color: #fff; }
+
+.module h2, .module caption, .inline-group h2 {
+  margin: 0;
+  padding: 8px;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: left;
+  background: #79aec8;
+  color: #fff; }
+
 /* CALENDARS & CLOCKS */
 .calendarbox, .clockbox {
   margin: 5px auto;
