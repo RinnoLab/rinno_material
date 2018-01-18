@@ -12820,6 +12820,8 @@ ul.timelist, .timelist li {
   font-size: 13px;
   border-bottom: 1px solid #eee;
   min-height: 70px; }
+  .form-row.field-accessories {
+    display: inline-block; }
 
 .submit-row a.deletelink {
   height: auto !important;
