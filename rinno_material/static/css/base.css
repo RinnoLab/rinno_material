@@ -157,7 +157,7 @@ div.help ul {
     cursor: help;
 }
 
-p img, h1 img, h2 img, h3 img, h4 img, td img {
+p, h1 img, h2 img, h3 img, h4 img, td img {
     vertical-align: middle;
 }
 
@@ -208,7 +208,7 @@ td, th {
     line-height: 16px;
     border-bottom: 1px solid #eee;
     vertical-align: top;
-    padding: 8px;
+    padding:10px;
 
 }
 
@@ -271,7 +271,7 @@ thead th.sorted .text {
 }
 
 table thead th .text span {
-    padding: 8px 10px;
+    /*padding: 8px 10px;*/
     display: block;
 }
 
@@ -404,7 +404,7 @@ select[multiple] {
 /* FORM BUTTONS */
 
 .button, input[type=submit], input[type=button], .submit-row input, a.button {
-    background: #79aec8;
+    background: #1167AB;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
@@ -643,8 +643,6 @@ a.deletelink:focus, a.deletelink:hover {
     text-decoration: none;
 }
 
-/* OBJECT TOOLS 
-
 .object-tools {
     font-size: 10px;
     font-weight: bold;
@@ -653,15 +651,6 @@ a.deletelink:focus, a.deletelink:hover {
     position: relative;
     margin-top: -48px;
 }
-
-.form-row .object-tools {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    float: none;
-    height: 2em;
-    padding-left: 3.5em;
-}
-
 .object-tools li {
     display: block;
     float: left;
@@ -672,6 +661,18 @@ a.deletelink:focus, a.deletelink:hover {
 .object-tools a {
     border-radius: 15px;
 }
+
+/* OBJECT TOOLS /*
+
+
+.form-row .object-tools {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: none;
+    height: 2em;
+    padding-left: 3.5em;
+}
+
 
 .object-tools a:link, .object-tools a:visited {
     display: block;

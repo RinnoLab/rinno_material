@@ -7,6 +7,8 @@ $(document).ready(function(){	*/
 
 $(document).ready(function(){
 
+	    $('select').material_select();
+
 	$(".listabilio li").click(function(){
 		$(".listabilio li").removeClass("checked");
 		$(this).addClass("checked");
