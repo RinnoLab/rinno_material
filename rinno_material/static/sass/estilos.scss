@@ -1170,7 +1170,13 @@ table tr .action-checkbox {
 		}
 	}
 }
-
+.datetimeshortcuts {
+	#calendarlink0 {
+		&:before{
+			content:"date_range";
+		}
+	}
+}
 
 .form-row {
     overflow: visible !important;
@@ -1180,8 +1186,8 @@ table tr .action-checkbox {
 }
 .submit-row {
 	a.deletelink {
-		height: auto;
-		color: #fff;
+		height: auto !important;
+		color: #fff !important;
 	}
 }
 fieldset {

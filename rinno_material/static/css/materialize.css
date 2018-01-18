@@ -12648,6 +12648,9 @@ table tr .action-checkbox {
       line-height: 100%;
       padding-left: 35px; }
 
+.datetimeshortcuts #calendarlink0:before {
+  content: "date_range"; }
+
 .form-row {
   overflow: visible !important;
   padding: 10px;
@@ -12655,8 +12658,8 @@ table tr .action-checkbox {
   border-bottom: 1px solid #eee; }
 
 .submit-row a.deletelink {
-  height: auto;
-  color: #fff; }
+  height: auto !important;
+  color: #fff !important; }
 
 fieldset.module {
   border-left: none;
