@@ -1178,7 +1178,12 @@ table tr .action-checkbox {
     font-size: 13px;
     border-bottom: 1px solid #eee;
 }
-
+.submit-row {
+	a.deletelink {
+		height: auto;
+		color: #fff;
+	}
+}
 fieldset {
 	&.module {
 		border-left: none;
