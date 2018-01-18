@@ -12220,6 +12220,8 @@ input.validate {
     /*padding:10px;  */
     border-left: none;
     /*margin-top:-150px;*/ }
+    .wrap #changelist-filter ul li.selected {
+      border-left: 5px solid #01579B; }
     .wrap #changelist-filter h3 {
       font-size: 15px;
       padding: 10px;
