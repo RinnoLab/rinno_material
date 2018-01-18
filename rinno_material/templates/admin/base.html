@@ -209,6 +209,7 @@
            
             <li>
                 <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+                    {% if app_list %}
                 	 {% for model in app.models %}
                     <li>
                         <a class="collapsible-header{% if app.active %} active{% endif %} hvr-backward">
@@ -229,6 +230,7 @@
                         </div>
                     </li>
                      {% endfor %}
+                     {% endif %}
                 </ul>
               </li>
         </ul>
