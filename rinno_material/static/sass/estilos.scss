@@ -172,6 +172,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 		span {
 			margin: 0px;
 		}
+		.activator {
+			i {
+				position: absolute;
+				right: 5px;
+				bottom: 6px;
+			}
+		}
 	}
 	.app-item {
 		padding-left: 0px;
