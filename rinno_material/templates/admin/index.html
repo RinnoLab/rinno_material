@@ -42,43 +42,7 @@
                         {% endfor %}
                 </div>
             </div>
-        </div>
-        <div class="col s12 m4 l3">
-            <div class="card mod">
-                <div class="card-image waves-effect waves-block waves-light activator hvr-push">
-                   <i class="material-icons">build</i>
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4 ">App Name<i class="material-icons right">more_vert</i></span>
-                    <!--<p><a href="#">This is a link</a></p>-->
-                </div>
-                <div class="card-reveal">
-
-                    <span class="card-title grey-text text-darken-4">
-                        App Name<i class="material-icons right">close</i>
-
-                    </span> 
-                     {% for model in app.models %}
-                        <div class="app-item col s12 m12 l6">
-                            <a class="truncate hvr-backward" href="{{ model.admin_url }}">
-                                <span>
-                                    {{ model.icon }}
-                                    {{ model.name }}
-                                </span>
-                            </a>
-                            <!--
-                            {% if model.add_url %}
-                            <a href="{{ model.add_url }}" class="addlink">
-                                <i class="material-icons">playlist_add</i>
-                            </a>
-                            {% else %}
-                            <div>&nbsp;</div>
-                            {% endif %}-->
-                        </div>
-                        {% endfor %}
-                </div>
-            </div>
-        </div>
+        </div>   
      
     </div>
 </div>
