@@ -187,7 +187,7 @@ $(".button-collapse2").sideNav({
 	//$("#contenido2").fadeIn("fast");
 	
 
-
+	alert("test");
 
 	
 	
