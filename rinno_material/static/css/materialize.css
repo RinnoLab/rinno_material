@@ -12648,7 +12648,7 @@ table tr .action-checkbox {
       line-height: 100%;
       padding-left: 35px; }
 
-.datetimeshortcuts #calendarlink0::before {
+.datetimeshortcuts .date-icon::before {
   content: "\E916"; }
 
 /* CALENDARS & CLOCKS */
