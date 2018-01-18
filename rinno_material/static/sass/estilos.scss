@@ -526,6 +526,13 @@ main {
 	 	font-size: 16px;	 }
 	    
 }
+table {
+	tr {
+		td {
+			width:auto !important;
+		}
+	}
+}
 .row1 {
 	input {
 		width: 100% !important;
