@@ -12652,7 +12652,7 @@ table tr .action-checkbox {
   content: "\E916"; }
 
 .selector-add {
-  content: "\E5C8"; }
+  content: "\E5C8" !important; }
 
 .inline-group .tabular td.original p {
   height: 20px !important; }
