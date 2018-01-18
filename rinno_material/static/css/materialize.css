@@ -12168,6 +12168,9 @@ main {
     margin-bottom: 10px;
     font-size: 16px; }
 
+.field-color input {
+  width: 70px; }
+
 #main {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
