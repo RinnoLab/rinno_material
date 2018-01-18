@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="{% static 'css/materialize.css' %}" media="screen">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
-  
+
 	<!--CSS Rinno theme -->
 {% block extrahead %}{% endblock %}
 	<!--JS Rinno theme -->
@@ -34,8 +34,7 @@
 </head>
 {% load i18n %}
 
-<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
-  data-admin-utc-offset="{% now "Z" %}">
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}" data-admin-utc-offset="{% now "Z" %}">
 
 <!-- Container -->
  <div id="wrap" class="wrap">
