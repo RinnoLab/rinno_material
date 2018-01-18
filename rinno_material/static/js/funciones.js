@@ -8,6 +8,7 @@ $(document).ready(function(){	*/
 $(document).ready(function(){
 
 	    $('select').material_select();
+	   $('.related-widget-wrapper select').material_select('destroy'); 
 
 	$(".listabilio li").click(function(){
 		$(".listabilio li").removeClass("checked");
