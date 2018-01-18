@@ -561,10 +561,11 @@ input.validate {
 }
 #changelist-filter {
     position: relative;
-    /*top: 00px;*/
+    /*top: 00px;
+    width:auto;*/
     right: 0;
     z-index:1;
-    width:auto;
+    
     background: #f0f0f0;
     box-sizing: border-box;
   /*padding:10px;  */
