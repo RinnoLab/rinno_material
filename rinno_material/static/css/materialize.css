@@ -12651,7 +12651,7 @@ table tr .action-checkbox {
 .datetimeshortcuts .date-icon::before {
   content: "\E916"; }
 
-.selector-add {
+.selector-add::before {
   content: "\E5C8" !important; }
 
 .inline-group .tabular td.original p {
