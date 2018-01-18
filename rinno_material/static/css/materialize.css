@@ -12169,7 +12169,7 @@ main {
     font-size: 16px; }
 
 .field-color input {
-  width: 70px; }
+  width: 50px !important; }
 
 #main {
   -webkit-box-flex: 1;
