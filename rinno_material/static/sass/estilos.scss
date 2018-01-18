@@ -1172,7 +1172,7 @@ table tr .action-checkbox {
 }
 .datetimeshortcuts {
 	#calendarlink0 {
-		&:before{
+		&::before{
 			content:"date_range";
 		}
 	}
