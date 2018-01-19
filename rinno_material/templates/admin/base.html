@@ -31,6 +31,39 @@
 
 
 	<!--JS Rinno theme <link rel="stylesheet" type="text/css" href="{% static "css/forms.css" %}" />-->
+  {% block theme %}
+        {% if request.user.is_authenticated %}
+            <style type="text/css">
+                nav {
+                   background-color: {{ request|get_org_style:'navigation' }};
+                }
+                .page-footer {
+                    background-color: {{ request|get_org_style:'footer' }};
+                }
+                #slide-out .collapsible .collapsible-header.active {
+                    background-color: {{ request|get_org_style:'sidebar' }};
+                }
+                #slide-out2 {
+                    background-color: {{ request|get_org_style:'second_sidebar' }};
+                }
+                .dropdown-content li a {
+                    color: {{ request|get_org_style:'dropdown' }};
+                }
+                .mod .card-image i {
+                     color: {{ request|get_org_style:'link' }};
+                }
+                a {
+                    color: {{ request|get_org_style:'link' }};
+                }
+                #slide-out2 .dropdown-content {
+                    border-color: {{ request|get_org_style:'second_sidebar' }};
+                }
+                #result_list_paginate  span .current {
+                     background-color:{{ request|get_org_style:'navigation' }};
+                }
+            </style>
+        {% endif %}
+        {% endblock theme %}
 
 </head>
 {% load i18n %}
