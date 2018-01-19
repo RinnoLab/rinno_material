@@ -208,7 +208,9 @@
                 </li>
                 <li class="divider"></li>
                 {% block sidenav_items %}
-
+                <script type="text/javascript">
+                  console.log(modules);
+                </script>
                 {% for module in modules %}
                 <li {% if module.active %}class="active"{% endif %}>
                     <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
