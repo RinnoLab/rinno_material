@@ -200,40 +200,44 @@
     </header>
     <!-- END Header -->
 
-      <!--Menu sidebar-->
-        <ul id="slide-out" class="side-nav menuleft">
-            <li class="menutitle bold">
-                Menú
-            </li>
-            <li class="divider"></li>
-           
-            <li>
-                <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
-                    {% if app_list %}
-                	 {% for model in app.models %}
-                    <li>
-                        <a class="collapsible-header{% if app.active %} active{% endif %} hvr-backward">
-                            {{ app.app_icon }}
-                            {{ app.name|truncatechars:23 }}
-                        </a>
-                        <div class="collapsible-body" {% if app.active %}style="display:block"{% endif %}>
-                            <ul>
-                               
-                                <li class="{% if model.active %}active{% endif %}">
-                                    <a href="{{ model.admin_url }}">
-                                        {{ model.icon }}
-                                        {% trans model.name %}
-                                    </a>
-                                </li>
-                  
-                            </ul>
-                        </div>
-                    </li>
-                     {% endfor %}
-                     {% endif %}
-                </ul>
-              </li>
-        </ul>
+      {% block menuside %}
+           {% if not is_popup %}
+            <ul id="slide-out" class="side-nav menuleft">
+                <li class="menutitle bold">
+                    Menú
+                </li>
+                <li class="divider"></li>
+                {% block sidenav_items %}
+
+                {% for module in modules %}
+                <li {% if module.active %}class="active"{% endif %}>
+                    <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+                        <li>
+                            <a class="collapsible-header{% if module.active %} active{% endif %} hvr-backward">
+                                {{ module.app_icon }}
+                                {{ module.name|truncatechars:23 }}
+                            </a>
+                            <div class="collapsible-body" {% if module.active %}style="display:block"{% endif %}>
+                                <ul>
+                                    {% for model in module.models %}
+                                    <li class="{% if model.active %}active{% endif %}">
+                                        <a href="{{ model.admin_url }}">
+                                            {{ model.icon }}
+                                            {% trans model.name %}
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+
+                {% endblock sidenav_items %}
+            </ul>
+            {% endif %}
+        {% endblock menuside %}
          
  
 
