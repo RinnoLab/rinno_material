@@ -39,12 +39,13 @@
                             <a class="truncate hvr-backward truncate" href="{{ model.admin_url }}">
                                 <span>
                                     {{ model.icon }}
-                                    {% if model.add_url %}
-                                    <a href="{{ model.add_url }}" class="addlink">+</a>
-                                    {% else %}
+                                    
                                     
                                     {% endif %}
                                     {{ model.name }}
+                                    {% if model.add_url %}
+                                    <a href="{{ model.add_url }}" class="addlink"><i class="material-icons">add</i></a>
+                                    {% else %}
                                 </span>
                             </a>
                         </div>
