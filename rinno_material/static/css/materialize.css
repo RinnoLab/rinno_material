@@ -12863,12 +12863,12 @@ ul.timelist, .timelist li {
   height: auto !important;
   color: #fff !important; }
 
+.submit-row .default {
+  background: #4caf50; }
+
 fieldset.module {
   border-left: none;
   border-right: none; }
-
-fieldset .default {
-  background: #4caf50; }
 
 .selector-available, .selector-chosen {
   float: left;

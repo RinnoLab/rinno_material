@@ -1436,15 +1436,16 @@ ul.timelist, .timelist li {
 		height: auto !important;
 		color: #fff !important;
 	}
+	.default {
+		background: #4caf50;
+	}
 }
 fieldset {
 	&.module {
 		border-left: none;
 		border-right: none;
 	}
-	.default {
-		background: #4caf50;
-	}
+
 }
 
 .selector-available, .selector-chosen {
