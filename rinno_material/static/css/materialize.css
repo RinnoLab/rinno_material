@@ -12696,6 +12696,9 @@ table tr .action-checkbox {
   background: #01579B;
   color: #fff; }
 
+.inteform {
+  padding: 20px 20px; }
+
 .fixed-action-btn a {
   -webkit-border-radius: 60% !important;
   border-radius: 60% !important; }

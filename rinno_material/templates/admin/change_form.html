@@ -14,7 +14,7 @@
 
 
 
-{% block content %}<div id="content-main">
+{% block content %}
 {% if not is_popup %}
 {% block breadcrumbs %}
  <div class="rowdf nmb">
@@ -35,6 +35,8 @@
 
 {% endblock %}
 {% endif %}
+<div id="content-main" class="inteform">
+
 {% block object-tools %}
 {% if change %}{% if not is_popup %}
   <ul class="object-tools">
