@@ -234,46 +234,43 @@
 
     </header>
     <!-- END Header -->
-
+    {% if app_list %}
     {% block menuside %}
     {% if not is_popup %}
     <ul id="slide-out" class="side-nav menuleft">
-        <li class="menutitle bold">
-            Menú
-        </li>
-        <li class="divider"></li>
-
-      
-                {% if app_list %} 
-                  {% for app in app_list %}
-                  <li>
-                    <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
-                  <li>
-                      <a class="collapsible-header{% if app.active %} active{% endif %} hvr-backward">
-                         {{ app.app_icon }}
-                         {{ app.name|truncatechars:23 }}
-                     </a>
-                      <div class="collapsible-body" {% if app.active %}style="display:block" {% endif %}>
-                          <ul>
-                              {% for model in app.models %}
-                              <li class="{% if model.active %}active{% endif %}">
-                                  <a href="{{ model.admin_url }}">
-                                     {{ model.icon }}
-                                     {% trans model.name %}
-                                 </a>
-                              </li>
-                              {% endfor %}
-                          </ul>
-                      </div>
-                  </li>
-                       </ul>
-                  </li>
-                  {% endfor %} 
-                {% endif %}
-       
-    </ul>
+      <li class="menutitle bold">
+        Menú
+      </li>
+      <li class="divider"></li>
+      {% for app in app_list %}
+      <li>
+        <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+          <li>
+            <a class="collapsible-header{% if app.active %} active{% endif %} hvr-backward">
+                 {{ app.app_icon }}
+                 {{ app.name|truncatechars:23 }}
+             </a>
+            <div class="collapsible-body" {% if app.active %}style="display:block" {% endif %}>
+              <ul>
+                {% for model in app.models %}
+                <li class="{% if model.active %}active{% endif %}">
+                  <a href="{{ model.admin_url }}">
+                             {{ model.icon }}
+                             {% trans model.name %}
+                         </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      {% endfor %}
     {% endif %}
+
+    </ul>
     {% endblock menuside %}
+    {% endif %}
 
     {% block sidebarmobile %}
     <!--Menu sidebar 2 mobile-->
