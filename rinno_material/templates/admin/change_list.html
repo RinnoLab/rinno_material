@@ -48,6 +48,36 @@
 
 {% block content %}
   <div class="contentInt" id="content-main">
+    <!--sidebarmenu interior-->
+        <div class="boxnavinterior col s12 m2 npr">
+            <ul id="nav-mobile" class="side-nav">
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li class="menutitle bold">
+                           Menú {{ opts.verbose_name_plural }}
+                           <i class="material-icons hide-on-large-only hide-on-med-only">expand_more</i>
+                        </li>
+                        <div class="acord">
+                        <li class="bold">
+                        {% get_app_list request as app_list %}
+                        {% for item in app_list %}
+                            {% if cl.opts.app_label == item.app_label %}
+                                {% for model in item.models  %}
+                                <li class="bolds {% if model.active %}active{% endif %}">
+                                    <a href="{{ model.admin_url }}" class="collapsible-header waves-effect">
+                                        <span>{{ model.name }}</span>
+                                        {{ model.icon }}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                        </li>
+                        </div>
+                  </ul>
+                </li>
+            </ul>
+        </div><!--sidebarmenu interior-->
        {% block object-tools %}
             {% block object-tools-items %}
             {% if has_add_permission %}
