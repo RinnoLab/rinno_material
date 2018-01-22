@@ -65,6 +65,7 @@
                 </li>
             </ul>
         </div><!--sidebarmenu interior-->
+    <div class="intwrap">
                 {% if not is_popup %}
         {% block breadcrumbs %}
          <div class="rowdf nmb">
@@ -128,6 +129,7 @@
       {% endblock %}
       {% block pagination %}{% pagination cl %}{% endblock %}
       </form>
+    </div>
     </div>
   </div>
 {% endblock %}
