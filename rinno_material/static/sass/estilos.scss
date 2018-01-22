@@ -1198,8 +1198,11 @@ table tr .action-checkbox {
 
 
 .fixed-action-btn {
-	-webkit-border-radius: 60% !important;
+	
+	a {
+		-webkit-border-radius: 60% !important;
 	border-radius: 60% !important;
+	}
 }
 
 /* CALENDARS & CLOCKS */
