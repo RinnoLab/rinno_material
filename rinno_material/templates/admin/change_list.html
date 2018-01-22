@@ -47,7 +47,7 @@
 {% block coltype %}flex{% endblock %}
 
 {% block content %}
-  <div class="contentInt" id="content-main">
+  <div class="contentInt" id="contenido">
     <!--sidebarmenu interior-->
         <div class="boxnavinterior col s12 m2 npr">
             <ul id="nav-mobile" class="side-nav">
@@ -58,7 +58,7 @@
                            <i class="material-icons hide-on-large-only hide-on-med-only">expand_more</i>
                         </li>
                         <div class="acord">
-                        <li class="bold">
+                          <li class="bold">
                               <li class="bolds {% if model.active %}active{% endif %}">
                                   <a href="{{ model.admin_url }}" class="collapsible-header waves-effect">
                                       <span>Item test</span>
@@ -77,7 +77,7 @@
                                       {{ model.icon }}
                                   </a>
                               </li>
-                          </li>
+                            </li>
                         </div>
                   </ul>
                 </li>
