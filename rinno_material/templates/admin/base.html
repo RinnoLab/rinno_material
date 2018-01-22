@@ -75,6 +75,7 @@
 <!-- Container -->
  <div id="wrap" class="wrap">
     {% if not is_popup %}
+    {% block header %}
     <!-- Header -->
     <header id="header" class="navbar-fixed">
         <!--menu top -->
@@ -233,6 +234,7 @@
         </nav><!--menu top -->
 
     </header>
+    {% endblock %}
     <!-- END Header -->
     {% if app_list %}
     {% block menuside %}
