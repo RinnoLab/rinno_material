@@ -59,19 +59,12 @@
                         </li>
                         <div class="acord">
                         <li class="bold">
-                        {% get_app_list request as app_list %}
-                        {% for item in app_list %}
-                            {% if cl.opts.app_label == item.app_label %}
-                                {% for model in item.models  %}
-                                <li class="bolds {% if model.active %}active{% endif %}">
+                          <li class="bolds {% if model.active %}active{% endif %}">
                                     <a href="{{ model.admin_url }}" class="collapsible-header waves-effect">
-                                        <span>{{ model.name }}</span>
+                                        <span>asfaf </span>
                                         {{ model.icon }}
                                     </a>
                                 </li>
-                                {% endfor %}
-                            {% endif %}
-                        {% endfor %}
                         </li>
                         </div>
                   </ul>
