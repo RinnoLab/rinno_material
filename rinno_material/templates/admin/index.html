@@ -41,13 +41,14 @@
                                     {{ model.icon }}
                                   
                                     {{ model.name }}
-                                      {% if model.add_url %}
-                                    <a href="{{ model.add_url }}" class="addlink"><i class="material-icons">add</i></a>
-                                    {% else %}
-                                    
-                                    {% endif %}
+
                                 </span>
-                            </a>
+                              {% if model.add_url %}
+                                <a href="{{ model.add_url }}" class="addlink"><i class="material-icons">add</i></a>
+                                {% else %}
+                                
+                                {% endif %}
+                        </a>
                         </div>
                         {% endfor %}
                 </div>
