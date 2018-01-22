@@ -1170,12 +1170,9 @@ table tr .action-checkbox {
 		}
 	}
 }
-.datetimeshortcuts {
-	.date-icon{
-		&::before{
-			content:"\E916";
-		}
-	}
+.datetimeshortcuts .date-icon {
+    background: url(../img/icon-calendar.svg) 0 0 no-repeat;
+    top: -1px;
 }
 .selector-add {
 	/*&::before{
@@ -1197,6 +1194,12 @@ table tr .action-checkbox {
     text-align: left;
     background: #01579B;
     color: #fff;
+}
+
+
+.fixed-action-btn {
+	-webkit-border-radius: 60%;
+border-radius: 60%;
 }
 
 /* CALENDARS & CLOCKS */
