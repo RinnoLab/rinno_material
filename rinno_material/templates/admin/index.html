@@ -35,20 +35,20 @@
 
                     </span>
                      {% for model in app.models %}
-                        <div class="app-item col s12 m12 l6">
-                            <a class="truncate hvr-backward truncate" href="{{ model.admin_url }}">
-                                <span>
+                        <div class="app-item col s12 m12 l6">  
+                            <span>
+                                <a class="truncate hvr-backward truncate" href="{{ model.admin_url }}">
                                     {{ model.icon }}
                                   
                                     {{ model.name }}
-                                </span>
-                                
-                                {% if model.add_url %}
-                                    <a href="{{ model.add_url }}" class="addlink"><i class="material-icons">add</i></a>
-                                {% endif %}
-                        </a>
+                                </a>
+                            </span>
+                            {% if model.add_url %}
+                                <a href="{{ model.add_url }}" class="addlink">{% trans 'Add' %}</a>
+                                {% else %}
+                            {% endif %}
                         </div>
-                        {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
