@@ -11883,6 +11883,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
       width: auto;
       vertical-align: top;
       padding: 0px; }
+      .mod .app-item .addlink i {
+        color: #4caf50; }
     .mod .app-item > span {
       display: inline-block;
       width: 100px !important; }
