@@ -12171,8 +12171,7 @@ main {
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   background: #FAFAFA;
-  padding: 20px 20px;
-  /**/ }
+  /*padding: 20px 20px;*/ }
   main > h3 {
     margin-left: 10px;
     margin-bottom: 10px;
