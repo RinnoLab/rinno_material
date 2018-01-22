@@ -294,6 +294,7 @@
         {% endif %}
     {% endblock messages %}
 
+    {% block main %}
     <!-- Content -->
     <main>
         {% block pretitle %}{% endblock %}
@@ -306,6 +307,7 @@
 
     </main>
     <!-- END Content -->
+    {% endblock %}
 
     {% if not is_popup %}
     {% block footer %}

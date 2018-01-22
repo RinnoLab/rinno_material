@@ -18,7 +18,7 @@
 {% block content_title %}{% endblock %}
 
 {% block breadcrumbs %}{% endblock %}
-
+ {% block main %}}{% endblock %}
 {% block content2 %}
  
        <div id="wrap" class="wrap valign-wrapper wrap2">
@@ -119,7 +119,7 @@
 {% block footer %}{% endblock footer %}<!-- footer custom login-->   
  
 {% block js %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script src="{% static 'js/materialize.js' %}"></script>
 <script type="text/javascript">
    $(window).on('load', function () {
