@@ -243,14 +243,16 @@
         </li>
         <li class="divider"></li>
 
-        <li>
-            <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
-                {% if app_list %} {% for app in app_list %}
-                <li>
-                    <a class="collapsible-header{% if app.active %} active{% endif %} hvr-backward">
-                       {{ app.app_icon }}
-                       {{ app.name|truncatechars:23 }}
-                   
+      
+                {% if app_list %} 
+                  {% for app in app_list %}
+                  <li>
+                    <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+                  <li>
+                      <a class="collapsible-header{% if app.active %} active{% endif %} hvr-backward">
+                         {{ app.app_icon }}
+                         {{ app.name|truncatechars:23 }}
+                     </a>
                       <div class="collapsible-body" {% if app.active %}style="display:block" {% endif %}>
                           <ul>
                               {% for model in app.models %}
@@ -263,11 +265,12 @@
                               {% endfor %}
                           </ul>
                       </div>
-                    </a>
-                </li>
-                {% endfor %} {% endif %}
-            </ul>
-        </li>
+                  </li>
+                       </ul>
+                  </li>
+                  {% endfor %} 
+                {% endif %}
+       
     </ul>
     {% endif %}
     {% endblock menuside %}
