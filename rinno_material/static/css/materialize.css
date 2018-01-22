@@ -11884,7 +11884,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
       vertical-align: top;
       padding: 0px; }
     .mod .app-item > span {
-      display: inline-block; }
+      display: inline-block;
+      width: 100px; }
   .mod .card-title {
     margin-bottom: 0px; }
   .mod .card-reveal {
