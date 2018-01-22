@@ -73,6 +73,7 @@
 <body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}" data-admin-utc-offset="{% now "Z" %}">
 
 <!-- Container -->
+{% block wrapint %}
  <div id="wrap" class="wrap">
     {% if not is_popup %}
     {% block header %}
@@ -294,7 +295,7 @@
         {% endif %}
     {% endblock messages %}
 
-    {% block main %}
+    
     <!-- Content -->
     <main>
         {% block pretitle %}{% endblock %}
@@ -307,7 +308,7 @@
 
     </main>
     <!-- END Content -->
-    {% endblock %}
+   
 
     {% if not is_popup %}
     {% block footer %}
@@ -331,7 +332,7 @@
         {% endif %}
 </div>
 <!-- END Container -->
-
+ {% endblock %}
 <!--block para login-->
     {% block content2 %}{% endblock %}<!--/block para login-->
 
