@@ -182,6 +182,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 	}
 	.app-item {
 		padding-left: 0px;
+		.addlink {
+			display: inline-block;
+			width: auto;
+			vertical-align: top;
+		}
+		> span {
+			display: inline-block;
+		}
 	}
 	.card-title{
 		margin-bottom: 0px;
@@ -1195,6 +1203,7 @@ table tr .action-checkbox {
     background: #01579B;
     color: #fff;
 }
+
 
 
 .fixed-action-btn {
