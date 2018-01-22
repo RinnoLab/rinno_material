@@ -618,6 +618,12 @@ input.validate {
 	.actions {
 		margin-right: 0px;
 		background: none;
+		label {
+			vertical-align: bottom;
+		}
+		.button {
+			margin-left: 20px;
+		}
 	}
 	.results {
 		margin-right: 0px;

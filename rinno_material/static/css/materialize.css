@@ -12242,6 +12242,10 @@ input.validate {
     .wrap #changelist-form .actions {
       margin-right: 0px;
       background: none; }
+      .wrap #changelist-form .actions label {
+        vertical-align: bottom; }
+      .wrap #changelist-form .actions .button {
+        margin-left: 20px; }
     .wrap #changelist-form .results {
       margin-right: 0px; }
   .wrap #changelist-filter {
