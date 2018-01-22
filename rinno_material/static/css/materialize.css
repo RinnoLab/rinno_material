@@ -12232,13 +12232,13 @@ input.validate {
       background: #f8f8f8;
       color: #666;
       width: 70%; }
+  .wrap #toolbar {
+    margin: 0px;
+    padding: 0 20px; }
   .wrap #changelist-form {
     display: inline-block;
     width: 80%;
     padding: 0 20px; }
-    .wrap #changelist-form #toolbar {
-      margin: 0px;
-      padding: 0 20px; }
     .wrap #changelist-form .actions {
       margin-right: 0px;
       background: none; }

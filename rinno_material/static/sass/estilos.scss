@@ -606,14 +606,15 @@ input.validate {
 	    width: 70%;
 	}
 }
+#toolbar {
+		margin: 0px;
+		padding: 0 20px;
+	}
 #changelist-form {
 	display: inline-block;
 	width:80%;
 	padding: 0 20px;
-	#toolbar {
-		margin: 0px;
-		padding: 0 20px;
-	}
+
 	.actions {
 		margin-right: 0px;
 		background: none;
