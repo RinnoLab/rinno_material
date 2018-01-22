@@ -12674,8 +12674,8 @@ table tr .action-checkbox {
   color: #fff; }
 
 .fixed-action-btn {
-  -webkit-border-radius: 60%;
-  border-radius: 60%; }
+  -webkit-border-radius: 60% !important;
+  border-radius: 60% !important; }
 
 /* CALENDARS & CLOCKS */
 .calendarbox, .clockbox {
