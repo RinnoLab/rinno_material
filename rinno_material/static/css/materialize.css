@@ -12218,10 +12218,7 @@ input.validate {
   padding-bottom: 0px; }
 
 .wrap {
-  /*
-.contentInt {
-	width: 70% !important;
-}*/ }
+  /**/ }
   .wrap #changelist {
     position: static;
     width: 100%; }
@@ -12282,6 +12279,8 @@ input.validate {
       width: 89%;
       /*display: table-cell;*/
       vertical-align: middle; }
+  .wrap .contentInt .noint {
+    display: none !important; }
   .wrap h2 {
     font-size: 28px !important; }
   .wrap .breadbox {
@@ -12620,6 +12619,10 @@ table.dataTable thead .sorting_desc {
       margin-right: 15px; }
     .boxnavinterior .side-nav .collapsible-body {
       padding: 0px !important; }
+
+.interior {
+  float: right;
+  width: 85%; }
 
 .menutitle {
   padding: 0 20px !important;
