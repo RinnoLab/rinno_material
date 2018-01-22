@@ -12602,7 +12602,10 @@ table.dataTable thead .sorting_desc {
 
 .boxnavinterior {
   height: 100vh;
-  padding-right: 20px; }
+  padding-right: 20px;
+  position: relative;
+  display: inline-block;
+  width: 15%; }
   .boxnavinterior .side-nav {
     width: 15.5%;
     max-width: 300px;
