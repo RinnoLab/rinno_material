@@ -250,19 +250,20 @@
                     <a class="collapsible-header{% if app.active %} active{% endif %} hvr-backward">
                        {{ app.app_icon }}
                        {{ app.name|truncatechars:23 }}
-                   </a>
-                    <div class="collapsible-body" {% if app.active %}style="display:block" {% endif %}>
-                        <ul>
-                            {% for model in app.models %}
-                            <li class="{% if model.active %}active{% endif %}">
-                                <a href="{{ model.admin_url }}">
-                                   {{ model.icon }}
-                                   {% trans model.name %}
-                               </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+                   
+                      <div class="collapsible-body" {% if app.active %}style="display:block" {% endif %}>
+                          <ul>
+                              {% for model in app.models %}
+                              <li class="{% if model.active %}active{% endif %}">
+                                  <a href="{{ model.admin_url }}">
+                                     {{ model.icon }}
+                                     {% trans model.name %}
+                                 </a>
+                              </li>
+                              {% endfor %}
+                          </ul>
+                      </div>
+                    </a>
                 </li>
                 {% endfor %} {% endif %}
             </ul>
