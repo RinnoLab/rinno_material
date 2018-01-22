@@ -190,7 +190,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 		}
 		> span {
 			display: inline-block;
-			width: 100px;
+			width: 100px !important;
 		}
 	}
 	.card-title{
