@@ -280,14 +280,7 @@
 
 
 
-    {% block breadcrumbs %}
-    <div class="breadcrumbs noint">
-    <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
-    {% if title %} &rsaquo; {{ title }}{% endif %}
-    </div>
-    {% endblock %}
-    {% endif %}
-
+ 
     {% block messages %}
         {% if messages %}
         <ul class="messagelist">{% for message in messages %}
