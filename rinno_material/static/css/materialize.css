@@ -12176,6 +12176,9 @@ main {
     margin-left: 10px;
     margin-bottom: 10px;
     font-size: 16px; }
+  main .intwrap {
+    float: right;
+    width: 85%; }
 
 .vIntegerField {
   width: 4em !important; }
