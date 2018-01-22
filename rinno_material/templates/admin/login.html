@@ -1,11 +1,15 @@
 {% extends "admin/base_site.html" %}
 {% load i18n static %}
+ 
 
-{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/login.css" %}" />
-{{ form.media }}
-{% endblock %}
 
 {% block bodyclass %}{{ block.super }} login{% endblock %}
+
+<!-- header custom login-->
+{% block header %}{% endblock %}<!-- header custom login-->
+
+{% block wrapgeneral %} {% endblock %} 
+
 
 {% block usertools %}{% endblock %}
 
@@ -15,52 +19,112 @@
 
 {% block breadcrumbs %}{% endblock %}
 
-{% block content %}
-{% if form.errors and not form.non_field_errors %}
-<p class="errornote">
-{% if form.errors.items|length == 1 %}{% trans "Please correct the error below." %}{% else %}{% trans "Please correct the errors below." %}{% endif %}
-</p>
-{% endif %}
+{% block content2 %}
+ 
+       <div id="wrap" class="wrap valign-wrapper wrap2">
+         
 
-{% if form.non_field_errors %}
-{% for error in form.non_field_errors %}
-<p class="errornote">
-    {{ error }}
-</p>
-{% endfor %}
-{% endif %}
 
-<div id="content-main" class="login">
 
-{% if user.is_authenticated %}
-<p class="errornote">
-{% blocktrans trimmed %}
-    You are authenticated as {{ username }}, but are not authorized to
-    access this page. Would you like to login to a different account?
-{% endblocktrans %}
-</p>
-{% endif %}
+      <!--loading-->
+      <div id="loading" class="valign-wrapper">
+        <div class="preloader-wrapper big active ">
+          <div class="spinner-layer spinner-red-only center-align">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div><!--loading-->
 
-<form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
-  <div class="form-row">
-    {{ form.username.errors }}
-    {{ form.username.label_tag }} {{ form.username }}
-  </div>
-  <div class="form-row">
-    {{ form.password.errors }}
-    {{ form.password.label_tag }} {{ form.password }}
-    <input type="hidden" name="next" value="{{ next }}" />
-  </div>
-  {% url 'admin_password_reset' as password_reset_url %}
-  {% if password_reset_url %}
-  <div class="password-reset-link">
-    <a href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?' %}</a>
-  </div>
-  {% endif %}
-  <div class="submit-row">
-    <label>&nbsp;</label><input type="submit" value="{% trans 'Log in' %}" />
-  </div>
-</form>
 
-</div>
+      <!--#contenido-->
+      <div id="contenido2" class="center-align" >
+        
+        <div class="loginbox valign-wrapper ">
+          <div class="logo">
+            <img src="{% static 'img/logoRinno.png' %}" alt="RinnoManager">
+          </div>
+          <div class="boxformlogin">
+            <div>
+              <form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix"></i> 
+                    {{ form.username.errors }}
+                    {{ form.username.label_tag }}
+                    {{ form.username }}
+                  </div>
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix"></i>
+                    {{ form.password.errors }}
+                    {{ form.password.label_tag }}
+                    {{ form.password }}
+                    <input type="hidden" name="next" value="{{ next }}" />
+                  </div>
+                  {% url 'admin_password_reset' as password_reset_url %}
+                  {% if password_reset_url %}
+                  <div class="password-reset-link">
+                    <a href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?' %}</a>
+                  </div>
+                  {% endif %}
+                    <label>  
+                      {% if form.errors and not form.non_field_errors %}
+                      <p class="errornote">
+                        {% if form.errors.items|length == 1 %}{% trans "Please correct the error below." %}{% else %}{% trans "Please correct the errors below." %}{% endif %}
+                      </p>
+                      {% endif %}
+
+                      {% if form.non_field_errors %}
+                      {% for error in form.non_field_errors %}
+                      <p class="errornote">
+                          {{ error }}
+                      </p>
+                      {% endfor %}
+                      {% endif %}
+                      {% if user.is_authenticated %}
+                        <p class="errornote">
+                          {% blocktrans trimmed %}
+                          You are authenticated as {{ username }}, but are not authorized to
+                          access this page. Would you like to login to a different account?
+                          {% endblocktrans %}
+                        </p>
+                      {% endif %}
+                    </label>
+                    <button type="submit" class="waves-effect waves-light btn-large">Entrar</button>
+                    <div class="row">
+                      <div class="col s6 nplr">
+                        <p><a href="javascript:;">Recuperar contraseña</a></p>
+                      </div>
+                      <div class="col s6 ">
+                        <p><a href="javascript:;">Registrarse</a></p>
+                      </div>
+                    </div>   
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div><!--#contenido-->
+    </div>
 {% endblock %}
+
+<!-- footer custom login-->
+{% block footer %}{% endblock footer %}<!-- footer custom login-->   
+ 
+{% block js %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{% static 'js/materialize.js' %}"></script>
+<script type="text/javascript">
+   $(window).on('load', function () {
+      $("#loading").hide();
+      $("#contenido2").fadeIn("fast");
+    });
+</script>
+{% endblock js %}
