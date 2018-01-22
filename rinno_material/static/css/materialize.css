@@ -12867,6 +12867,9 @@ fieldset.module {
   border-left: none;
   border-right: none; }
 
+fieldset .default {
+  background: #4caf50; }
+
 .selector-available, .selector-chosen {
   float: left;
   width: 380px;
