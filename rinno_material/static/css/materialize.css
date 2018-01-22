@@ -12864,7 +12864,7 @@ ul.timelist, .timelist li {
   color: #fff !important; }
 
 .submit-row .default {
-  background: #4caf50; }
+  background: #4caf50 !important; }
 
 fieldset.module {
   border-left: none;
