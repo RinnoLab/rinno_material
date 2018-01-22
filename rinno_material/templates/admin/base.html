@@ -15,22 +15,22 @@
 {% block extrastyle %}{% endblock %}
 {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
 
-	<!--CSS Rinno theme -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" media="screen">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="{% static 'css/materialize.css' %}" media="screen">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <!--CSS Rinno theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" media="screen">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
 
-	<!--CSS Rinno theme -->
+    <!--CSS Rinno theme -->
 {% block extrahead %}{% endblock %}
-	<!--JS Rinno theme -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--JS Rinno theme -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-	<script src="{% static 'js/materialize.js' %}"></script>
-	<script  type="text/javascript" src="{% static 'js/funciones.js' %} "></script>
+    <script src="{% static 'js/materialize.js' %}"></script>
+    <script  type="text/javascript" src="{% static 'js/funciones.js' %} "></script>
 
 
-	<!--JS Rinno theme <link rel="stylesheet" type="text/css" href="{% static "css/forms.css" %}" />-->
+    <!--JS Rinno theme <link rel="stylesheet" type="text/css" href="{% static "css/forms.css" %}" />-->
 
 {% block theme %}
        {% if request.user.is_authenticated %}
@@ -65,7 +65,7 @@
            </style>
        {% endif %}
        {% endblock theme %}
-  
+
 
 </head>
 {% load i18n %}
@@ -77,7 +77,7 @@
     {% if not is_popup %}
     <!-- Header -->
     <header id="header" class="navbar-fixed">
-    	<!--menu top -->
+        <!--menu top -->
         <nav class="menutop">
           <div class="row">
             <div class="col s12">
@@ -93,7 +93,7 @@
                 <!-- lista menu-->
                 <div class="boxmenuopciones">
                   <ul id="menuopciones" class="right hide-on-med-and-down dropdownbox">
-                   
+
                     {% if organizations_list.exists and organizations_list.count > 1 %}
                     <!-- Dropdown -->
                     <li >
@@ -117,7 +117,7 @@
                       </ul>
                     </li><!-- Dropdown -->
                     {% endif %}
-                    
+
                     <li>
                       <a class="dropdown-button waves-effect dhover" href="#!" title="Notificaciones" data-activates="dnotificaciones">
                         <span class="badge red">7</span>
@@ -151,24 +151,24 @@
                       <i class="material-icons">&#xE7FD;</i>
                       </a>
                        {% block usertools %}
-								{% if has_permission %}
-									
+                                {% if has_permission %}
+
                       <ul id="dperfil" class="dropdown-content ">
                         <li class="liuser">
                           <div class="user-view">
                             <div class="background">
                                 <img class="background" src="{% static 'img/sample-1.jpg' %}">
                             </div>
-     
+
 
                             {% block userphoto %}
-	                            {% if user.photo.url %}
-	                           	 <a href="#"><img class="circle" src="{% static 'img/yuna.jpg' %}"></a>
-	                            {% else %}
+                                {% if user.photo.url %}
+                                    <a href="#"><img class="circle" src="{% static 'img/yuna.jpg' %}"></a>
+                                {% else %}
                             <a href="#"><img class="circle" src="{% static 'img/yuna.jpg' %}"></a>
                             {% endif %}
                             {% endblock %}
-                            <a href="#!name"><span class="white-text name">{{ request.user.get_username|title }} 
+                            <a href="#!name"><span class="white-text name">{{ request.user.get_username|title }}
                             {% firstof user.get_short_name user.get_username %}</span></a>
                             <a href="#!email"><span class="white-text email">{{ request.user.email }}</span></a>
                           </div>
@@ -183,8 +183,8 @@
                         {% endif %}
                       </ul>
 
-								{% endif %}
-							{% endblock %}
+                                {% endif %}
+                            {% endblock %}
                     </li><!-- Dropdown -->
 
 
@@ -198,29 +198,29 @@
                             {% endif %}
                         {% endif %}
                          {% if user.is_active and user.is_staff %}
-	                        <li>
-	                            <a href="{% url 'admin:password_change' %}" title="Configuración" class="waves-effect hvr-push">
-	                                <i class="material-icons">&#xE8B8;</i>
-	                            </a>
-	                        </li>
-		                    <li>
-			                    <a href="{% url 'admin:logout' %}" title="{% trans 'Log out' %}" class="waves-effect">
-			                      <i class="material-icons"></i>
-			                    </a>
-		                  	</li>
-                     
-                         
-		              
-		                    {% url 'django-admindocs-docroot' as docsroot %}
-		                    {% if docsroot %}
-		                        <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
-		                    {% endif %}
-		                {% endif %}
-	               
-	                	<a class="test" href="{% url 'admin:logout' %}"></a>
-	                    {% endblock userlinks %}
+                            <li>
+                                <a href="{% url 'admin:password_change' %}" title="Configuración" class="waves-effect hvr-push">
+                                    <i class="material-icons">&#xE8B8;</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'admin:logout' %}" title="{% trans 'Log out' %}" class="waves-effect">
+                                  <i class="material-icons"></i>
+                                </a>
+                              </li>
 
-		               
+
+
+                            {% url 'django-admindocs-docroot' as docsroot %}
+                            {% if docsroot %}
+                                <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
+                            {% endif %}
+                        {% endif %}
+
+                        <a class="test" href="{% url 'admin:logout' %}"></a>
+                        {% endblock userlinks %}
+
+
                   </ul>
                 </div><!-- lista menu-->
                 <a id="moresetting" href="#" data-activates="slide-out2" class="btnmenu button-collapse2 hvr-push">
@@ -231,52 +231,45 @@
         {% block nav-global %}{% endblock %}
           </div>
         </nav><!--menu top -->
-        
+
     </header>
     <!-- END Header -->
 
-      {% block menuside %}
-           {% if not is_popup %}
-            <ul id="slide-out" class="side-nav menuleft">
-                <li class="menutitle bold">
-                    Menú a
-                </li>
-                <li class="divider"></li>
-                {% block sidenav_items %}
-                <script type="text/javascript">
-                  console.log(module);
-                </script>
-                {% for module in modules %}
-                <li {% if module.active %}class="active"{% endif %}>
-                    <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
-                        <li>
-                            <a class="collapsible-header{% if module.active %} active{% endif %} hvr-backward">
-                                {{ module.app_icon }}
-                                {{ module.name|truncatechars:23 }}
-                            </a>
-                            <div class="collapsible-body" {% if module.active %}style="display:block"{% endif %}>
-                                <ul>
-                                    {% for model in module.models %}
-                                    <li class="{% if model.active %}active{% endif %}">
-                                        <a href="{{ model.admin_url }}">
-                                            {{ model.icon }}
-                                            {% trans model.name %}
-                                        </a>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                {% endfor %}
+    {% block menuside %}
+    {% if not is_popup %}
+    <ul id="slide-out" class="side-nav menuleft">
+        <li class="menutitle bold">
+            Menú
+        </li>
+        <li class="divider"></li>
 
-                {% endblock sidenav_items %}
+        <li>
+            <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+                {% if app_list %} {% for app in app_list %}
+                <li>
+                    <a class="collapsible-header{% if app.active %} active{% endif %} hvr-backward">
+                       {{ app.app_icon }}
+                       {{ app.name|truncatechars:23 }}
+                   </a>
+                    <div class="collapsible-body" {% if app.active %}style="display:block" {% endif %}>
+                        <ul>
+                            {% for model in app.models %}
+                            <li class="{% if model.active %}active{% endif %}">
+                                <a href="{{ model.admin_url }}">
+                                   {{ model.icon }}
+                                   {% trans model.name %}
+                               </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+                {% endfor %} {% endif %}
             </ul>
-            {% endif %}
-        {% endblock menuside %}
-         
- 
+        </li>
+    </ul>
+    {% endif %}
+    {% endblock menuside %}
 
     {% block sidebarmobile %}
     <!--Menu sidebar 2 mobile-->
@@ -311,7 +304,7 @@
         {{ content }}
         {% endblock %}
         {% block sidebar %}{% endblock %}
-      
+
     </main>
     <!-- END Content -->
 
