@@ -11867,7 +11867,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
     .mod .card-image i {
       line-height: 200px;
       font-size: 70px;
-      color: #888; }
+      color: #888;
+      opacity: 0.8; }
   .mod .card-content {
     padding: 7px 24px 5px; }
     .mod .card-content span {
