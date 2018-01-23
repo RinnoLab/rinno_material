@@ -606,6 +606,13 @@ input.validate {
 	    width: 70%;
 	}
 }
+
+.cempresa {
+	> span {
+		line-height: 60px;
+		height: 100%;
+	}
+}
 #toolbar {
 		margin: 0px;
 		padding: 10px 20px !important;
