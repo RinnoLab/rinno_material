@@ -1,4 +1,4 @@
-{% load i18n static %}<!DOCTYPE html>
+{% load i18n static rinno_material %}<!DOCTYPE html>
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
@@ -70,7 +70,7 @@
 </head>
 {% load i18n %}
 
-<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}" data-admin-utc-offset="{% now "Z" %}">
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}" data-admin-utc-offset="{% now "Z" %}" data-media-url="{% get_media_prefix %}">
 
 <!-- Container -->
 {% block wrapint %}
@@ -89,7 +89,7 @@
                 </a>
                 <!--{% block branding %}{% endblock %}-->
                 <a href="/admin/" class="brand-logo" title="{% trans 'Administration' %}">
-                  <img src="" alt="{% trans 'Administration' %}">
+                    <img src="{{ request|get_org_icon }}" alt="{% trans 'Administration' %}">
                 </a>
 
                 <!-- lista menu-->
@@ -283,7 +283,7 @@
 
 
 
-   
+
 
     {% endif %}
 
@@ -295,11 +295,11 @@
         {% endif %}
     {% endblock messages %}
 
-    
+
     <!-- Content -->
     <main>
         {% block pretitle %}{% endblock %}
-        
+
         {% block content %}
         {% block object-tools %}{% endblock %}
         {{ content }}
@@ -308,7 +308,7 @@
 
     </main>
     <!-- END Content -->
-   
+
 
     {% if not is_popup %}
     {% block footer %}
