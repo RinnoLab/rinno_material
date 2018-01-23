@@ -18,18 +18,15 @@ def getattribute(value, arg):
         return value[int(arg)]
 
 
-@register.filter
-def get_org_style(request, section=None):
+@register.simple_tag(name='get_org_style')
+def get_org_style(request, section=None, default_color=None):
     """Retornar el objeto OrganizationStyle asociado al usuario."""
     organization_id = request.session.get('organization_id')
-    organization = Organization.objects.filter(id=organization_id)
-    org_style = OrganizationStyle.objects.filter(organization__in=organization)
-
-    if section and org_style.count() == 1:
-        org_style = org_style.first().__dict__.get(section)
-    else:
-        org_style = org_style.exists()
-    return org_style
+    if hasattr(request.user, 'current_organization'):
+        current_organization = getattr(request.user, 'current_organization')
+        if current_organization:
+            return getattr(current_organization.organizationstyle, section)
+    return default_color
 
 
 @register.filter

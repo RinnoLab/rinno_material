@@ -29,42 +29,40 @@
     <script src="{% static 'js/materialize.js' %}"></script>
     <script  type="text/javascript" src="{% static 'js/funciones.js' %} "></script>
 
-
     <!--JS Rinno theme <link rel="stylesheet" type="text/css" href="{% static "css/forms.css" %}" />-->
-
-{% block theme %}
+    {% block theme %}
        {% if request.user.is_authenticated %}
            <style type="text/css">
                nav {
-                  background-color: #01579B;
+                  background-color: {% get_org_style request 'navigation' '#01579B' %};
                }
                .page-footer {
-                   background-color: #01579B;
+                    background-color: {% get_org_style request 'footer' '#01579B' %};
                }
                #slide-out .collapsible .collapsible-header.active {
-                   background-color:#01579B;
+                   background-color: {% get_org_style request 'sidebar' '#01579B' %};
                }
                #slide-out2 {
-                   background-color: ;
+                   background-color: {% get_org_style request 'sidebar' '#01579B' %};
                }
                .dropdown-content li a {
-                   color:#01579B ;
+                    color: {% get_org_style request 'dropdown' '#01579B' %};
                }
                .mod .card-image i {
-                    color: ;
+                    color: {% get_org_style request 'link' '#01579B' %};
                }
                a {
-                   color:#01579B ;
+                    color: {% get_org_style request 'link' '#01579B' %};
                }
                #slide-out2 .dropdown-content {
-                   border-color:#01579B ;
+                   border-color: {% get_org_style request 'navigation' '#01579B' %};
                }
                #result_list_paginate  span .current {
-                    background-color:#01579B ;
+                    background-color: {% get_org_style request 'navigation' '#01579B' %};
                }
            </style>
        {% endif %}
-       {% endblock theme %}
+    {% endblock theme %}
 
 
 </head>
