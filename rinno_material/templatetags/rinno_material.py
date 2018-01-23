@@ -48,7 +48,8 @@ def get_organizations_list(request):
     organization_list = request.session.get('organizations_list', [])
     if hasattr(request.user, 'current_organization'):
         organization_list = getattr(request.user, 'current_organization')
-        organization_list = ContentType.objects.get_for_model(
-            organization_list.__class__).model_class().objects.filter(
-                groups__user=request.user)
+        if organization_list:
+            organization_list = ContentType.objects.get_for_model(
+                organization_list.__class__).model_class().objects.filter(
+                    groups__user=request.user)
     return organization_list
