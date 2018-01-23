@@ -1,6 +1,7 @@
 import re
 from django import template
 from django.conf import settings
+from django.contrib.contenttypes.models import ContentType
 
 numeric_test = re.compile("^\d+$")
 register = template.Library()
@@ -45,5 +46,9 @@ def get_org_icon(request):
 @register.filter
 def get_organizations_list(request):
     organization_list = request.session.get('organizations_list', [])
-    organizations = Organization.objects.filter(id__in=organization_list)
-    return organizations
+    if hasattr(request.user, 'current_organization'):
+        organization_list = getattr(request.user, 'current_organization')
+        organization_list = ContentType.objects.get_for_model(
+            organization_list.__class__).model_class().objects.filter(
+                groups__user=request.user)
+    return organization_list
