@@ -1446,6 +1446,9 @@ ul.timelist, .timelist li {
     }
 }
 .submit-row {
+	position: fixed;
+	bottom: 43px;
+	width: 97%;
 	a.deletelink {
 		height: auto !important;
 		color: #fff !important;
