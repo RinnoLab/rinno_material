@@ -12868,9 +12868,9 @@ ul.timelist, .timelist li {
     display: inline-block; }
 
 .submit-row {
-  position: fixed;
-  bottom: 43px;
-  width: 97%; }
+  /*position: fixed;
+	bottom: 43px;
+	width: 97%;*/ }
   .submit-row a.deletelink {
     height: auto !important;
     color: #fff !important; }
