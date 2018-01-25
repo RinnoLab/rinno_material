@@ -19,9 +19,11 @@
 
 		{% if show_delete_link %}
 		{% url opts|admin_urlname:'delete' original.pk|admin_urlquote as delete_url %}
-			<a href="{% add_preserved_filters delete_url %}" class="btn-floating red darken-1">
-				<i class="material-icons">delete</i>	
-			</a>
+			<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Eliminar" value="">
+				<a href="{% add_preserved_filters delete_url %}" class="btn-floating red darken-1">
+					<i class="material-icons">delete</i>	
+				</a>
+			</li>
 		{% endif %}
 
 		<!--Grabar y añadir otro -->
