@@ -1,28 +1,44 @@
 {% load i18n admin_urls %}
+<div class="submit-row">
 
- <div class="fixed-action-btn click-to-toggle">
-    <a class="btn-floating btn-large red">
-      <i class="large material-icons">mode_edit</i>
-    </a>
-    <ul>
-          {% if show_save_and_add_another %}<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Grabar y añadir otro">
-        <a class="btn-floating yellow darken-1" value="{% trans 'Save and add another' %}" name="_addanother">
-            <i class="material-icons">library_add</i>
-        </a>
-    </li>{% endif %}
+{% if show_save %}<input type="submit" value="{% trans 'Save' %}" class="default" name="_save">{% endif %}
 
-    {% if show_save_and_continue %}
-      <li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Grabar y continuar editando">
-           <a class="btn-floating green" value="{% trans 'Save and continue editing' %}" name="_continue">
-                <i class="material-icons">cached</i>  
-           </a>  
-      </li>{% endif %}
-      {% if show_save %}
-      <li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Grabar">
-        <a class="btn-floating blue" value="{% trans 'Save' %}" class="default" name="_save">
-            <i class="material-icons">save</i>
-        </a>
-      </li>
-      {% endif %}
-    </ul>
-  </div>
+
+{% if show_delete_link %}
+    {% url opts|admin_urlname:'delete' original.pk|admin_urlquote as delete_url %}
+    <p class="deletelink-box"><a href="{% add_preserved_filters delete_url %}" class="deletelink">{% trans "Delete" %}</a></p>
+{% endif %}
+
+{% if show_save_as_new %}<input type="submit" value="{% trans 'Save as new' %}" name="_saveasnew">{% endif %}
+
+{% if show_save_and_add_another %}<input type="submit" value="{% trans 'Save and add another' %}" name="_addanother">{% endif %}
+
+{% if show_save_and_continue %}<input type="submit" value="{% trans 'Save and continue editing' %}" name="_continue">{% endif %}
+</div>
+
+<!--box fixed buttons action -->
+<div class="fixed-action-btn click-to-toggle">
+	<a class="btn-floating btn-large red">
+	  <i class="large material-icons">mode_edit</i>
+	</a>
+	<ul>
+		<!--Grabar y añadir otro -->
+		<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Grabar y añadir otro">
+			<button class="btn-floating yellow darken-1" type="submit">
+			<i class="material-icons">library_add</i>
+			</button>
+		</li><!--Grabar y añadir otro -->
+		<!--Grabar y continuar editando -->
+	  	<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Grabar y continuar editando">
+			<a class="btn-floating green">
+			<i class="material-icons">cached</i>  
+			</a>  
+	  	</li><!--Grabar y continuar editando -->
+	  	<!--Grabar -->
+		<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Grabar">
+			<a class="btn-floating blue">
+				<i class="material-icons">save</i>
+			</a>
+		</li><!--Grabar -->
+	</ul>
+</div><!--box fixed buttons action -->
