@@ -6,7 +6,7 @@ $(document).ready(function(){	*/
 	 /**/
 
 $(document).ready(function(){
-	$('.fixed-action-btn > .btn-floating').click();
+	 $('.fixed-action-btn').openFAB();
 	   $('.select-wrapper select').material_select();
 	   $('.related-widget-wrapper select').material_select('destroy'); 
 
@@ -185,7 +185,7 @@ $(".button-collapse2").sideNav({
 	//$("#loading").hide();
 	//$("#contenido").fadeIn("fast");
 	//$("#contenido2").fadeIn("fast");
-	
+	 $('.fixed-action-btn').openFAB();
   $('.fixed-action-btn > .btn-floating').click();
 
 
