@@ -160,7 +160,7 @@ $(".button-collapse2").sideNav({
 	mediaquery.addListener(handleOrientationChange);
 
 
-  $('.fixed-action-btn').openToolbar();
+  $('.fixed-action-btn > .btn-floating').click();
 
 
     // $("#loading").hide();
