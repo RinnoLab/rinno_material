@@ -12704,7 +12704,16 @@ table tr .action-checkbox {
   background: #01579B;
   color: #fff; }
 
-.inteform {
+.module.collapsed h2 {
+  margin: 0;
+  padding: 8px;
+  font-weight: 400;
+  font-size: 13px !important;
+  text-align: left;
+  background: #01579B;
+  color: #fff; }
+
+963088532 .inteform {
   padding: 20px 20px !important; }
 
 .fixed-action-btn a {
@@ -12868,7 +12877,7 @@ ul.timelist, .timelist li {
     display: inline-block; }
 
 ul.messagelist li {
-  padding: 10px 10px 10px 30px; }
+  padding: 10px 10px 10px 30px !important; }
 
 .mobile-fab-tip {
   position: fixed;
