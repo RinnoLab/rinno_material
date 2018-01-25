@@ -1,18 +1,13 @@
 {% load i18n admin_urls %}
 <div class="submit-row">
 
-{% if show_save %}<input type="submit" value="{% trans 'Save' %}" class="default" name="_save">{% endif %}
 
 
-{% if show_delete_link %}
-    {% url opts|admin_urlname:'delete' original.pk|admin_urlquote as delete_url %}
-    <p class="deletelink-box"><a href="{% add_preserved_filters delete_url %}" class="deletelink">{% trans "Delete" %}</a></p>
-{% endif %}
 
-{% if show_save_as_new %}<input type="submit" value="{% trans 'Save as new' %}" name="_saveasnew">{% endif %}
 
-{% if show_save_and_add_another %}<input type="submit" value="{% trans 'Save and add another' %}" name="_addanother">{% endif %}
-{% if show_save_and_continue %}<input type="submit" value="{% trans 'Save and continue editing' %}" name="_continue">{% endif %}
+
+
+
 </div>
 
 <!--box fixed buttons action -->
@@ -22,30 +17,55 @@
 	</a>
 	<ul>
 
+		{% if show_delete_link %}
+		{% url opts|admin_urlname:'delete' original.pk|admin_urlquote as delete_url %}
+			<a href="{% add_preserved_filters delete_url %}" class="btn-floating red darken-1">
+				<i class="material-icons">delete</i>	
+			</a>
+		{% endif %}
+
 		<!--Grabar y añadir otro -->
 		{% if show_save_and_add_another %}
-		<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Grabar y añadir otro" value="">
-		<a class="btn-floating yellow darken-1">
-		<button class="btnsubimit" type="submit">
-		
-			
-				
-					<i class="material-icons">library_add</i>
-				
-			
-		</button></a></li>{% endif %}<!--Grabar y añadir otro -->
+		<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Guardar y añadir otro" value="">
+			<a class="btn-floating yellow darken-1">
+				<button class="btnsubimit" type="submit" name="_addanother">
+					<i class="material-icons">library_add</i>	
+				</button>
+			</a>
+		</li>{% endif %}<!--Grabar y añadir otro -->
 
 		<!--Grabar y continuar editando -->
-	  	<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Grabar y continuar editando">
+		{% if show_save_and_continue %}
+	  	<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Guardar y continuar editando">
 			<a class="btn-floating green">
-			<i class="material-icons">cached</i>  
+				<button class="btnsubimit" type="submit" name="_continue">
+					<i class="material-icons">cached</i>  
+				</button>
 			</a>  
-	  	</li><!--Grabar y continuar editando -->
+	  	</li>{% endif %}<!--Grabar y continuar editando -->
+	 
 	  	<!--Grabar -->
-		<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Grabar">
+	  	{% if show_save %}
+		<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Guardar">
 			<a class="btn-floating blue">
-				<i class="material-icons">save</i>
+				<button class="btnsubimit" type="submit" name="_save">
+					<i class="material-icons">save</i>
+				</button>
 			</a>
-		</li><!--Grabar -->
+		</li>{% endif %}<!--Grabar -->
+
+		<!--Grabar como nuevo-->
+	  	{% if show_save_as_new %}
+		<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Guardar como nuevo">
+			<a class="btn-floating blue">
+				<button class="btnsubimit" type="submit"name="_saveasnew">
+					<i class="material-icons">save</i>
+				</button>
+			</a>
+		</li>{% endif %}<!--Grabar como nuevo-->
+
+
+
+
 	</ul>
 </div><!--box fixed buttons action -->
