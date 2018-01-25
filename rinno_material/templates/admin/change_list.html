@@ -66,6 +66,14 @@
             </ul>
         </div><!--sidebarmenu interior-->
     <div class="intwrap">
+    {% block messages %}
+        {% if messages %}
+        <ul class="messagelist">{% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|capfirst }}</li>
+        {% endfor %}</ul>
+        {% endif %}
+    {% endblock messages %}
+
                 {% if not is_popup %}
         {% block breadcrumbs %}
          <div class="rowdf nmb">
