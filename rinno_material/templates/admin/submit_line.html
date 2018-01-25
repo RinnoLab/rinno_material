@@ -21,14 +21,18 @@
 	  <i class="large material-icons">mode_edit</i>
 	</a>
 	<ul>
+
 		<!--Grabar y añadir otro -->
+		{% if show_save_and_add_another %}
+		<button type="submit">
 		<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Grabar y añadir otro">
 			<a class="btn-floating yellow darken-1">
-				<button type="submit">
+				
 					<i class="material-icons">library_add</i>
-				</button>
+				
 			</a>
-		</li><!--Grabar y añadir otro -->
+		</li></button>{% endif %}<!--Grabar y añadir otro -->
+
 		<!--Grabar y continuar editando -->
 	  	<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Grabar y continuar editando">
 			<a class="btn-floating green">
