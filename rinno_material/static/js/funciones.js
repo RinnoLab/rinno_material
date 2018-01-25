@@ -160,7 +160,7 @@ $(".button-collapse2").sideNav({
 	mediaquery.addListener(handleOrientationChange);
 
 
-  $('.fixed-action-btn > .btn-floating').click();
+
 
 
     // $("#loading").hide();
@@ -186,7 +186,7 @@ $(".button-collapse2").sideNav({
 	//$("#contenido").fadeIn("fast");
 	//$("#contenido2").fadeIn("fast");
 	
-
+  $('.fixed-action-btn > .btn-floating').click();
 
 
 
