@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive.css" %}" />
     {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive_rtl.css" %}" />{% endif %}
 {% endblock %}-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 {% block extrastyle %}{% endblock %}
 {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
 
@@ -60,6 +61,10 @@
                #result_list_paginate  span .current {
                     background-color: {% get_org_style request 'navigation' '#01579B' %};
                }
+               .wrap #changelist-filter h3:first-child  {
+                    background-color: {% get_org_style request 'navigation' '#01579B' %};
+               }
+         
            </style>
        {% endif %}
     {% endblock theme %}
@@ -286,13 +291,13 @@
 
     {% endif %}
 
-    {% block messages %}
+    {% block messages1 %}
         {% if messages %}
         <ul class="messagelist">{% for message in messages %}
           <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|capfirst }}</li>
         {% endfor %}</ul>
         {% endif %}
-    {% endblock messages %}
+    {% endblock messages1 %}
 
 
     <!-- Content -->

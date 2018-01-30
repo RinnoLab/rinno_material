@@ -10,6 +10,7 @@ body {
 	width: 100%;
 	display: inline-block;
 	vertical-align: top;
+	padding: 20px 20px;
 }
 #content-related{
 	width: 20%;
@@ -31,6 +32,13 @@ body {
 .nplr {
 	padding-left: 0px !important;
 	padding-right: 0px !important;
+}
+
+
+.btnsubimit {
+	padding: 0px !important;
+	border: none !important;
+	background: no-repeat !important;
 }
 .loginbox {
 	    width: 500px;
@@ -165,6 +173,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 			line-height:200px;
 			font-size:70px;
 			color: #888;
+			opacity: 0.8;
 		}
 	}
 	.card-content {
@@ -604,6 +613,13 @@ input.validate {
 	    background: #f8f8f8;
 	    color: #666;
 	    width: 70%;
+	}
+}
+
+.cempresa {
+	> span {
+		line-height: 60px;
+		height: 100%;
 	}
 }
 #toolbar {
@@ -1235,8 +1251,16 @@ table tr .action-checkbox {
     color: #fff;
 }
 .module {
-	h2 {
-
+	&.collapsed {
+		h2 {
+			margin: 0;
+		    padding: 8px;
+		    font-weight: 400;
+		    font-size: 13px !important;
+		    text-align: left;
+		    background: #01579B;
+		    color: #fff;
+		}
 	}
 }
 
@@ -1437,7 +1461,23 @@ ul.timelist, .timelist li {
     	display: inline-block;
     }
 }
+ul.messagelist li {
+    padding: 10px 10px 10px 30px !important;
+}
+.mobile-fab-tip {
+	position: fixed;
+	right: 85px;
+	padding:0px 0.5rem;
+	text-align: right;
+	background-color: #323232;
+	border-radius: 2px;
+	color: #FFF;
+	width:auto;
+}
 .submit-row {
+	/*position: fixed;
+	bottom: 43px;
+	width: 97%;*/
 	a.deletelink {
 		height: auto !important;
 		color: #fff !important;

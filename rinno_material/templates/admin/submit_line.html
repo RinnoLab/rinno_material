@@ -1,0 +1,73 @@
+{% load i18n admin_urls %}
+<div class="submit-row">
+
+
+
+
+
+
+
+
+</div>
+
+<!--box fixed buttons action -->
+<div class="fixed-action-btn click-to-toggle">
+	<a class="btn-floating btn-large red">
+	  <i class="large material-icons">mode_edit</i>
+	</a>
+	<ul>
+
+		{% if show_delete_link %}
+		{% url opts|admin_urlname:'delete' original.pk|admin_urlquote as delete_url %}
+			<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Eliminar" value="">
+				<a href="{% add_preserved_filters delete_url %}" class="btn-floating red darken-1">
+					<i class="material-icons">delete</i>	
+				</a>
+			</li>
+		{% endif %}
+
+		<!--Grabar y añadir otro -->
+		{% if show_save_and_add_another %}
+		<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Guardar y añadir otro" value="">
+			<a class="btn-floating yellow darken-1">
+				<button class="btnsubimit" type="submit" name="_addanother">
+					<i class="material-icons">library_add</i>	
+				</button>
+			</a>
+		</li>{% endif %}<!--Grabar y añadir otro -->
+
+		<!--Grabar y continuar editando -->
+		{% if show_save_and_continue %}
+	  	<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Guardar y continuar editando">
+			<a class="btn-floating green">
+				<button class="btnsubimit" type="submit" name="_continue">
+					<i class="material-icons">cached</i>  
+				</button>
+			</a>  
+	  	</li>{% endif %}<!--Grabar y continuar editando -->
+	 
+	  	<!--Grabar -->
+	  	{% if show_save %}
+		<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Guardar">
+			<a class="btn-floating blue">
+				<button class="btnsubimit" type="submit" name="_save">
+					<i class="material-icons">save</i>
+				</button>
+			</a>
+		</li>{% endif %}<!--Grabar -->
+
+		<!--Grabar como nuevo-->
+	  	{% if show_save_as_new %}
+		<li class="tooltipped" data-position="left" data-delay="50" data-tooltip="Guardar como nuevo">
+			<a class="btn-floating blue">
+				<button class="btnsubimit" type="submit"name="_saveasnew">
+					<i class="material-icons">save</i>
+				</button>
+			</a>
+		</li>{% endif %}<!--Grabar como nuevo-->
+
+
+
+
+	</ul>
+</div><!--box fixed buttons action -->

@@ -11751,7 +11751,8 @@ body {
 #content-main {
   width: 100%;
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+  padding: 20px 20px; }
 
 #content-related {
   width: 20%;
@@ -11771,6 +11772,11 @@ body {
 .nplr {
   padding-left: 0px !important;
   padding-right: 0px !important; }
+
+.btnsubimit {
+  padding: 0px !important;
+  border: none !important;
+  background: no-repeat !important; }
 
 .loginbox {
   width: 500px;
@@ -11867,7 +11873,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
     .mod .card-image i {
       line-height: 200px;
       font-size: 70px;
-      color: #888; }
+      color: #888;
+      opacity: 0.8; }
   .mod .card-content {
     padding: 7px 24px 5px; }
     .mod .card-content span {
@@ -12232,6 +12239,9 @@ input.validate {
       background: #f8f8f8;
       color: #666;
       width: 70%; }
+  .wrap .cempresa > span {
+    line-height: 60px;
+    height: 100%; }
   .wrap #toolbar {
     margin: 0px;
     padding: 10px 20px !important; }
@@ -12700,6 +12710,15 @@ table tr .action-checkbox {
   background: #01579B;
   color: #fff; }
 
+.module.collapsed h2 {
+  margin: 0;
+  padding: 8px;
+  font-weight: 400;
+  font-size: 13px !important;
+  text-align: left;
+  background: #01579B;
+  color: #fff; }
+
 .inteform {
   padding: 20px 20px !important; }
 
@@ -12863,12 +12882,28 @@ ul.timelist, .timelist li {
   .form-row.field-accessories {
     display: inline-block; }
 
-.submit-row a.deletelink {
-  height: auto !important;
-  color: #fff !important; }
+ul.messagelist li {
+  padding: 10px 10px 10px 30px !important; }
 
-.submit-row .default {
-  background: #4caf50 !important; }
+.mobile-fab-tip {
+  position: fixed;
+  right: 85px;
+  padding: 0px 0.5rem;
+  text-align: right;
+  background-color: #323232;
+  border-radius: 2px;
+  color: #FFF;
+  width: auto; }
+
+.submit-row {
+  /*position: fixed;
+	bottom: 43px;
+	width: 97%;*/ }
+  .submit-row a.deletelink {
+    height: auto !important;
+    color: #fff !important; }
+  .submit-row .default {
+    background: #4caf50 !important; }
 
 fieldset.module {
   border-left: none;

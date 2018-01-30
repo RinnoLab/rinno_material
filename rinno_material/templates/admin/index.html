@@ -19,11 +19,12 @@
             <div class="card mod">
                 <div class="card-image waves-effect waves-block waves-light activator hvr-push">
                     {{ app.app_icon }}
+                     <i class="material-icons">build</i>
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4 truncate"> 
                         {{ app.name }}
-                        <i class="material-icons right">more_vert</i>
+                       
 
                     </span>
                     <!--<p><a href="#">This is a link</a></p>-->
@@ -37,7 +38,7 @@
                      {% for model in app.models %}
                         <div class="app-item col s12 m12 l6">  
                             <span class="truncate">
-                                <a class=" hvr-backward truncate" href="{{ model.admin_url }}">
+                                <a class="hvr-forward truncate" href="{{ model.admin_url }}">
                                     {{ model.icon }}
                                   
                                     {{ model.name }}
@@ -56,7 +57,6 @@
      
     </div>
 </div>
-
   
 {% else %}
     <p>{% trans "You don't have permission to edit anything." %}</p>

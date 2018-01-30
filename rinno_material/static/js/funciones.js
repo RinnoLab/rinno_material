@@ -185,7 +185,7 @@ $(".button-collapse2").sideNav({
 	//$("#loading").hide();
 	//$("#contenido").fadeIn("fast");
 	//$("#contenido2").fadeIn("fast");
-	
+	 $('.fixed-action-btn').openFAB();
 
 
 

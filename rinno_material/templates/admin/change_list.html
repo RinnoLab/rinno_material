@@ -25,6 +25,9 @@
 
 {% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} change-list{% endblock %}
 
+{% block messages1 %}
+
+{% endblock messages1 %}
 {% block coltype %}flex{% endblock %}
 
 {% block content %}
@@ -65,6 +68,14 @@
             </ul>
         </div><!--sidebarmenu interior-->
     <div class="intwrap">
+    {% block messages %}
+        {% if messages %}
+        <ul class="messagelist">{% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|capfirst }}</li>
+        {% endfor %}</ul>
+        {% endif %}
+    {% endblock messages %}
+
                 {% if not is_popup %}
         {% block breadcrumbs %}
          <div class="rowdf nmb">
