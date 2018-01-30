@@ -1,5 +1,5 @@
 {% extends "admin/base_site.html" %}
-{% load i18n admin_urls static admin_list %}
+{% load i18n admin_urls static admin_list rinno_material %}
 
 {% block extrastyle %}
   {{ block.super }}
@@ -25,7 +25,6 @@
 
 {% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} change-list{% endblock %}
 
-
 {% block coltype %}flex{% endblock %}
 
 {% block content %}
@@ -41,24 +40,24 @@
                         </li>
                         <div class="acord">
                           <li class="bold">
-                              <li class="bolds {% if model.active %}active{% endif %}">
+                              {% with request|applist as application %}
+                              {% for app in application %}
+                              {% if opts.app_label|title == app.name %}
+                              {% for model in app.models %}
+                              <li class="bolds">
                                   <a href="{{ model.admin_url }}" class="collapsible-header waves-effect">
-                                      <span>Item test</span>
-                                      {{ model.icon }}
+                                      <span>{{ model.name }}</span>
                                   </a>
                               </li>
-                              <li class="bolds {% if model.active %}active{% endif %}">
-                                  <a href="{{ model.admin_url }}" class="collapsible-header waves-effect">
-                                       <span>Item test</span>
-                                      {{ model.icon }}
-                                  </a>
-                              </li>
-                              <li class="bolds {% if model.active %}active{% endif %}">
-                                  <a href="{{ model.admin_url }}" class="collapsible-header waves-effect">
-                                       <span>Item test</span>
-                                      {{ model.icon }}
-                                  </a>
-                              </li>
+                              {% endfor %}
+                              {% endif %}
+                              {% endfor %}
+                              {% endwith %}
+                            </li>
+                            <li class="bolds">
+                                <a href="#" class="collapsible-header waves-effect">
+                                    <span>{{ model.verbose_name }}</span>
+                                </a>
                             </li>
                         </div>
                   </ul>
@@ -97,7 +96,7 @@
             {% endif %}
             {% endblock %}
             {% endblock %}
- 
+
     {% if cl.formset.errors %}
         <p class="errornote">
         {% if cl.formset.total_error_count == 1 %}{% trans "Please correct the error below." %}{% else %}{% trans "Please correct the errors below." %}{% endif %}
