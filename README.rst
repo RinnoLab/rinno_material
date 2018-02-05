@@ -35,6 +35,15 @@ Add it to your `INSTALLED_APPS`:
         ...
     )
 
+Add it to your `MIDDLEWARE`:
+
+.. code-block:: python
+
+    MIDDLEWARE = (
+        ...
+        'rinno_material.middleware.RinnoMaterialMiddleware',
+    )
+
 Add rinno_material's URL patterns:
 
 .. code-block:: python
