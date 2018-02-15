@@ -29,6 +29,15 @@
 
     <script src="{% static 'js/materialize.js' %}"></script>
     <script  type="text/javascript" src="{% static 'js/funciones.js' %} "></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "70458afd-165d-477b-8bdd-2b384fe48864",
+        });
+      });
+    </script>
 
     <!--JS Rinno theme <link rel="stylesheet" type="text/css" href="{% static "css/forms.css" %}" />-->
     {% block theme %}
@@ -64,7 +73,7 @@
                .wrap #changelist-filter h3:first-child  {
                     background-color: {% get_org_style request 'navigation' '#01579B' %};
                }
-         
+
            </style>
        {% endif %}
     {% endblock theme %}
