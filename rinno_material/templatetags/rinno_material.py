@@ -15,6 +15,7 @@ register = template.Library()
 @register.filter
 def get_onesignal_app_id(request):
     if hasattr(settings, 'ONESIGNAL_APP_ID'):
+        request.session['onesignal_app_id'] = settings.ONESIGNAL_APP_ID
         return settings.ONESIGNAL_APP_ID
     return False
 
