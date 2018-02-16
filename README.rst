@@ -35,7 +35,7 @@ Add it to your `INSTALLED_APPS`:
         ...
     )
 
-Add it to your `MIDDLEWARE`:
+Add to your `MIDDLEWARE`:
 
 .. code-block:: python
 
@@ -43,6 +43,12 @@ Add it to your `MIDDLEWARE`:
         ...
         'rinno_material.middleware.RinnoMaterialMiddleware',
     )
+
+Add to your `settings.py`:
+
+.. code-block:: python
+
+    ONESIGNAL_APP_ID = YOUR_ONESIGNAL_APP_ID
 
 Add rinno_material's URL patterns:
 
