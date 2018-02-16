@@ -36,16 +36,17 @@
         OneSignal.init({
           appId: "70458afd-165d-477b-8bdd-2b384fe48864",
         });
+        OneSignal.isPushNotificationsEnabled(function(isEnabled) {
+          if (isEnabled) {
+              // user has subscribed
+              OneSignal.getUserId( function(userId) {
+                  console.log('player_id of the subscribed user is : ' + userId);
+                  // Make a POST call to your server with the user ID
+              });
+            }
+          });
       });
-      OneSignal.isPushNotificationsEnabled(function(isEnabled) {
-        if (isEnabled) {
-            // user has subscribed
-            OneSignal.getUserId( function(userId) {
-                console.log('player_id of the subscribed user is : ' + userId);
-                // Make a POST call to your server with the user ID
-            });
-          }
-        });
+
     </script>
 
     <!--JS Rinno theme <link rel="stylesheet" type="text/css" href="{% static "css/forms.css" %}" />-->
