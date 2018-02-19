@@ -1,9 +1,9 @@
-# -*- coding: utf-8 -*-
 from django.conf.urls import url
-from django.views.generic import TemplateView
 
-from . import views
+from .views import PlayerID
 
 urlpatterns = [
-    url(r'', TemplateView.as_view(template_name="base.html")),
-    ]
+    url(r'update_player_id/(?P<onesignal_player_id>[0-9a-f-]+)',
+        PlayerID.as_view(),
+        name='update_player_id'),
+]

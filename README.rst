@@ -59,7 +59,7 @@ Add rinno_material's URL patterns:
 
     urlpatterns = [
         ...
-        url(r'^', include(rinno_material_urls)),
+        url(r'^rinno_material/', include('rinno_material.urls')),
         ...
     ]
 

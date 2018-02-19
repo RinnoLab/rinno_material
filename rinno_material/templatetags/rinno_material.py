@@ -21,6 +21,12 @@ def get_onesignal_app_id(request):
 
 
 @register.filter
+def get_onesignal_player_id(request):
+    request.session['onesignal_player_id'] = settings.ONESIGNAL_APP_ID
+    return request.session['onesignal_player_id']
+
+
+@register.filter
 def getattribute(value, arg):
     """Gets an attribute of an object dynamically from a string name"""
 
