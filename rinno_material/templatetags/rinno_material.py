@@ -44,7 +44,8 @@ def get_org_style(request, section=None, default_color=None):
     organization_id = request.session.get('organization_id')
     if hasattr(request.user, 'current_organization'):
         current_organization = getattr(request.user, 'current_organization')
-        if current_organization:
+        if current_organization and \
+                hasattr(current_organization, 'organizationstyle'):
             return getattr(current_organization.organizationstyle, section)
     return default_color
 
