@@ -29,7 +29,7 @@
                     </span>
                     <!--<p><a href="#">This is a link</a></p>-->
                 </div>
-                <div class="card-reveal">
+                <div class="card-action">
 
                     <span class="card-title grey-text text-darken-4">
                         {{ app.name }}<i class="material-icons right">close</i>
@@ -40,13 +40,11 @@
                             <span class="truncate">
                                 <a class="hvr-forward truncate" href="{{ model.admin_url }}">
                                     {{ model.icon }}
-                                  
                                     {{ model.name }}
                                 </a>
                             </span>
                             {% if model.add_url %}
-                                <i>- </i>
-                                <a href="{{ model.add_url }}" class="addlink" title="agregar"></a>
+                                <a href="{{ model.add_url }}" class="addlink" title="agregar"><i class="material-icons">library_add</i></a>
                                 {% else %}
                             {% endif %}
                         </div>
