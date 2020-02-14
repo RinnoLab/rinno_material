@@ -14,8 +14,27 @@
     <div class="row">
     {% if app_list %}
     {% for app in app_list %}
+
+    <div class="col s12 m4 l3">
+        <div class="card">
+          <div class="card-content mod">
+            <span class="card-title grey-text text-darken-4">{{ app.name }}</span>
+
+            {% for model in app.models %}
+                <span class="truncate">
+                <a class="hvr-forward truncate" href="{{ model.admin_url }}">
+                    {{ model.icon }}
+                    {{ model.name }}
+                </a>
+                </span>
+            {% endfor %}
+          </div>
+          <div class="card-action">
+          </div>
+        </div>
+      </div>
        
-        <div class="col s12 m4 l3 test">
+ <!--        <div class="col s12 m4 l3 test">
             <div class="card mod">
                 <div class="card-image waves-effect waves-block waves-light activator hvr-push">
                     {{ app.app_icon }}
@@ -24,13 +43,9 @@
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4 truncate"> 
                         {{ app.name }}
-                       
-
                     </span>
-                    <!--<p><a href="#">This is a link</a></p>-->
                 </div>
                 <div class="card-reveal">
-
                     <span class="card-title grey-text text-darken-4">
                         {{ app.name }}<i class="material-icons right">close</i>
                     </span>
@@ -50,8 +65,9 @@
                     {% endfor %}
                 </div>
             </div>
-        </div>
-          {% endfor %}   
+        </div> -->
+        
+    {% endfor %}   
      
     </div>
 </div>
