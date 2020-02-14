@@ -29,11 +29,10 @@
                     </span>
                     <!--<p><a href="#">This is a link</a></p>-->
                 </div>
-                <div class="card-action">
+                <div class="card-reveal">
 
                     <span class="card-title grey-text text-darken-4">
                         {{ app.name }}<i class="material-icons right">close</i>
-
                     </span>
                      {% for model in app.models %}
                         <div class="app-item col s12 m12 l6">  
@@ -44,7 +43,7 @@
                                 </a>
                             </span>
                             {% if model.add_url %}
-                                <a href="{{ model.add_url }}" class="addlink" title="agregar"><i class="material-icons">library_add</i></a>
+                                <a href="{{ model.add_url }}" class="addlink" title="agregar"></a>
                                 {% else %}
                             {% endif %}
                         </div>
