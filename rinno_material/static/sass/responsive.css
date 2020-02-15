@@ -1,0 +1,347 @@
+@media only screen and (min-width: 993px) and (max-width: 3500px) {
+  .modal-content {
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 992px) {
+  #slide-out2 {
+    top: 56px !important;
+    overflow-y: visible;
+    background: #01579b;
+    width: 65px;
+  }
+  #slide-out2 .dropdown-content {
+    top: 0px !important;
+    left: -200px !important;
+    width: 200px;
+    border: 1px solid #1A67A5 !important;
+    border-right: none !important;
+  }
+  #slide-out2 .user-view a {
+    text-align: right;
+    width: 100%;
+    display: block;
+  }
+  #slide-out2 .user-view .circle {
+    display: inline-block;
+    clear: both;
+  }
+  #slide-out2 #menuopciones {
+    width: 100%;
+    margin-top: 0px;
+  }
+  #slide-out2 li {
+    /*border-bottom: 1px dotted #eee;*/
+  }
+  #slide-out2 li > a {
+    padding: 0 20px;
+    text-align: right;
+  }
+  #slide-out2 li i {
+    float: right;
+    margin-right: 0px;
+    color: #fff;
+  }
+  #slide-out2 .badge {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: -8px;
+    width: 17px;
+    height: 17px !important;
+    line-height: 17px;
+    font-size: 11px;
+  }
+  #slide-out2 .material-icons.right {
+    margin-right: -8px;
+  }
+  #slide-out2 #dnotificaciones span {
+    display: none;
+  }
+  #moresetting {
+    display: block;
+  }
+  .brand-logo {
+    left: 52% !important;
+  }
+  .brand-logo img {
+    width: 170px !important;
+    margin-top: 12px;
+  }
+  .nmobile {
+    display: none;
+  }
+  .nodesktop {
+    display: block !important;
+  }
+}
+
+/*@media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1) { 
+     footer {
+     	display: none;
+     }
+}*/
+@media only screen and (min-width: 360px) and (max-width: 480px) {
+  .loginbox {
+    min-height: 30vh !important;
+    height: 60vh !important;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 719px) {
+  .mod a {
+    line-height: 40px;
+  }
+  .nmb {
+    display: none !important;
+  }
+  .boxnavinterior {
+    margin-top: -35px;
+  }
+  .boxnavinterior #nav-mobile {
+    padding-bottom: 0px;
+  }
+  .boxnavinterior #nav-mobile .menutitle i {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+  }
+  .fixedHeader-locked {
+    display: none;
+    /**/
+  }
+  .acord {
+    display: none;
+  }
+  .right-panel {
+    width: 100%;
+  }
+  .left-panel {
+    width: 100%;
+  }
+  .modal {
+    width: 95%;
+    max-height: 80%;
+  }
+  .modal .modal-content {
+    padding: 15px;
+  }
+  .modal .modal-footer {
+    padding: 15px;
+  }
+  .modal .btn {
+    width: 100%;
+  }
+  footer {
+    position: relative !important;
+    display: none;
+    /**/
+  }
+  .boxnavinterior {
+    display: block;
+    position: relative !important;
+    z-index: 2;
+    height: auto;
+  }
+  .boxnavinterior .side-nav {
+    position: relative !important;
+    width: 97%;
+    top: 46px;
+    max-width: none;
+    height: auto;
+    padding-bottom: 10px;
+    /*height: 100vh;*/
+  }
+  .boxnavinterior .side-nav li > a {
+    width: 100%;
+  }
+  .boxtabla .dataTables_length {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .boxtabla .dataTables_length {
+    display: none;
+  }
+  .boxtabla .dataTables_filter {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .boxtabla .dataTables_info {
+    display: none;
+  }
+  .boxtabla table {
+    overflow-x: scroll;
+  }
+  .boxtabla table tr td {
+    padding: 5px 5px;
+  }
+  .boxtabla table tr th {
+    padding: 5px 5px;
+  }
+  .boxtabla #example_paginate {
+    width: 100%;
+    text-align: center;
+  }
+  .boxtabla #example_paginate * {
+    float: none;
+    display: inline-block;
+  }
+  .interiorbox {
+    padding-top: 45px !important;
+    padding-right: 10px !important;
+  }
+  #contenido2 {
+    width: 100%;
+    display: none;
+  }
+  #contenido2 .logo {
+    margin-bottom: 0px;
+  }
+  #contenido2 .input-field {
+    margin-bottom: 10px;
+  }
+  #contenido2 .btn-large {
+    margin: 10px 0px 10px 0px;
+  }
+  #contenido2 p {
+    text-align: center;
+    /*font-size: 12px;*/
+  }
+  #contenido2 p a {
+    /*text-decoration: underline;*/
+  }
+  #contenido2 p a:hover {
+    text-decoration: underline;
+  }
+  .loginbox {
+    width: 95%;
+    height: 85vh;
+    min-height: 80vh;
+  }
+  .loginbox img {
+    width: 200px !important;
+  }
+  .loginbox .boxformlogin {
+    padding: 10px;
+  }
+  #header nav {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    /*box-shadow:none !important;*/
+  }
+  #header .dropdown-content {
+    /*right: 65px !important;*/
+    top: 0px !important;
+    left: -200px !important;
+    width: 200px;
+    border: 1px solid #1A67A5 !important;
+    border-right: none !important;
+  }
+  .tabs {
+    opacity: 0.9;
+  }
+  .nmobile {
+    display: none;
+  }
+  .nodesktop {
+    display: block !important;
+  }
+  .brand-logo {
+    left: 51% !important;
+  }
+  .brand-logo img {
+    width: 100% !important;
+    margin-top: 0px;
+  }
+  #slide-out {
+    z-index: 998;
+    top: 56px !important;
+    width: 80%;
+    max-width: 320px;
+  }
+  #slide-out li {
+    border-bottom: 1px dotted #eee;
+  }
+  #slide-out li:first-child {
+    border-bottom: none;
+  }
+  #dperfil {
+    overflow: hidden;
+  }
+  #slide-out2 {
+    top: 56px !important;
+    overflow-y: visible;
+    background: #01579b;
+    width: 65px;
+  }
+  #slide-out2 li > a {
+    width: 100%;
+  }
+  #slide-out2 .dropdown-content {
+    top: 0px !important;
+    left: -200px !important;
+    width: 200px;
+    border: 1px solid;
+    border-color: #1A67A5 !important;
+    border-right: none !important;
+  }
+  #slide-out2 .user-view a {
+    text-align: right;
+    width: 100%;
+    display: block;
+  }
+  #slide-out2 .user-view .circle {
+    display: inline-block;
+    clear: both;
+  }
+  #slide-out2 #menuopciones {
+    width: 100%;
+    margin-top: 0px;
+  }
+  #slide-out2 li {
+    /*border-bottom: 1px dotted #eee;*/
+  }
+  #slide-out2 li > a {
+    padding: 0 20px;
+    text-align: right;
+  }
+  #slide-out2 li i {
+    float: right;
+    margin-right: 0px;
+    color: #fff;
+  }
+  #slide-out2 .badge {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: -8px;
+    width: 17px;
+    height: 17px !important;
+    line-height: 17px;
+    font-size: 11px;
+  }
+  #slide-out2 .material-icons.right {
+    margin-right: -8px;
+  }
+  #slide-out2 #dnotificaciones span {
+    display: none;
+  }
+  #moresetting {
+    display: block;
+  }
+  #contenido {
+    min-height: 100vh;
+  }
+  .overleft {
+    display: none !important;
+  }
+}
+
+#contenido2 {
+  display: table-cell;
+}
+/*# sourceMappingURL=responsive.css.map */

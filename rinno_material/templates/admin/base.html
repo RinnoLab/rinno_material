@@ -62,34 +62,34 @@
        {% if request.user.is_authenticated %}
            <style type="text/css">
                nav {
-                  background-color: {% get_org_style request 'navigation' '#01579B' %};
+                  background-color: {% get_org_style request 'navigation' '#1f69cc;' %};
                }
                .page-footer {
-                    background-color: {% get_org_style request 'footer' '#01579B' %};
+                    background-color: {% get_org_style request 'footer' '#1f69cc;' %};
                }
                #slide-out .collapsible .collapsible-header.active {
-                   background-color: {% get_org_style request 'sidebar' '#01579B' %};
+                   background-color: {% get_org_style request 'sidebar' '#1f69cc;' %};
                }
                #slide-out2 {
-                   background-color: {% get_org_style request 'sidebar' '#01579B' %};
+                   background-color: {% get_org_style request 'sidebar' '#1f69cc;' %};
                }
                .dropdown-content li a {
-                    color: {% get_org_style request 'dropdown' '#01579B' %};
+                    color: {% get_org_style request 'dropdown' '#1f69cc;' %};
                }
                .mod .card-image i {
-                    color: {% get_org_style request 'link' '#01579B' %};
+                    color: {% get_org_style request 'link' '#1f69cc;' %};
                }
                a {
-                    color: {% get_org_style request 'link' '#01579B' %};
+                    color: {% get_org_style request 'link' '#1f69cc;' %};
                }
                #slide-out2 .dropdown-content {
-                   border-color: {% get_org_style request 'navigation' '#01579B' %};
+                   border-color: {% get_org_style request 'navigation' '#1f69cc;' %};
                }
                #result_list_paginate  span .current {
-                    background-color: {% get_org_style request 'navigation' '#01579B' %};
+                    background-color: {% get_org_style request 'navigation' '#1f69cc;' %};
                }
                .wrap #changelist-filter h3:first-child  {
-                    background-color: {% get_org_style request 'navigation' '#01579B' %};
+                    background-color: {% get_org_style request 'navigation' '#1f69cc;' %};
                }
 
            </style>
@@ -119,7 +119,7 @@
                 </a>
                 <!--{% block branding %}{% endblock %}-->
                 <a href="/admin/" class="brand-logo" title="{% trans 'Administration' %}">
-                    <img src="{{ request|get_org_icon }}" onerror="this.src='img/logo.png'" alt="{% trans 'Administration' %}">
+                    <img src="{{ request|get_org_icon }}" onerror="this.src='/static/img/logoRinno.png'" alt="{% trans 'Administration' %}">
                 </a>
 
                 <!-- lista menu-->

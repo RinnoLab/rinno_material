@@ -1,0 +1,356 @@
+#wrap {
+  min-height: 100%;
+  position: relative;
+}
+
+#header {
+  z-index: 999;
+}
+
+#header #iconmenu {
+  margin: 0 18px 0px 10px;
+}
+
+#moresetting {
+  position: absolute;
+  right: 0px;
+  margin-right: 0px;
+  display: none;
+}
+
+#slide-out2 #menuopciones {
+  display: block !important;
+}
+
+.rota180 {
+  -webkit-animation: spin 0.1s linear forwards;
+  animation: spin 0.1s linear forwards;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(90deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+#slide-out {
+  z-index: 998;
+  top: 65px !important;
+}
+
+#slide-out .arrow {
+  float: right;
+  right: 0px;
+  position: absolute;
+}
+
+#slide-out .collapsible .collapsible-header {
+  padding: 0 20px;
+}
+
+#slide-out .collapsible .collapsible-header.active .arrow {
+  /* IE 9 */
+  -webkit-transform: rotate(180deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+
+#slide-out .collapsible .collapsible-header .material-icons {
+  margin-right: 20px !important;
+}
+
+#loading {
+  margin-top: -56px;
+  height: 100vh;
+  text-align: center;
+}
+
+#loading .preloader-wrapper {
+  margin: 0 auto;
+}
+
+#contenido {
+  padding-bottom: 96px;
+  /* Height of the footer element */
+  display: none;
+}
+
+#footer {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+}
+
+.dropdownbox li {
+  position: relative;
+}
+
+.dropdownbox .dropdown-content {
+  min-width: 100%;
+}
+
+#footer {
+  text-align: center;
+}
+
+input[type=text] {
+  /* padding-left:10px !important;*/
+}
+
+input.validate {
+  /*padding-left:10px !important;
+	background:#eee !important;*/
+}
+
+.nmb {
+  margin-bottom: 0px;
+}
+
+.nptb {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.wrap .breadbox {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none !important;
+  height: 40px;
+  color: #999 !important;
+}
+
+.wrap .breadbox .breadcrumb::before {
+  color: #999 !important;
+  font-size: 14px;
+  line-height: 41px;
+}
+
+.wrap .breadbox .breadcrumb.activo {
+  cursor: default !important;
+}
+
+.wrap .breadbox .breadcrumb.activo:hover {
+  text-decoration: none;
+}
+
+.wrap .breadbox * {
+  background: none !important;
+  height: 40px;
+  line-height: 40px !important;
+  color: #999 !important;
+}
+
+.wrap .breadbox a {
+  color: #999 !important;
+  line-height: 40px !important;
+  font-size: 14px;
+}
+
+.wrap .breadbox a:hover {
+  text-decoration: underline;
+}
+
+.wrap .brand-logo img {
+  width: 30%;
+}
+
+.wrap #slide-out {
+  top: 0px;
+  z-index: 9999;
+}
+
+.wrap .menutop {
+  z-index: 1000 !important;
+}
+
+.wrap .menutop .button-collapse {
+  display: block;
+}
+
+.wrap .menuinvisible {
+  -webkit-transform: translateX(-100%) !important;
+          transform: translateX(-100%) !important;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.wrap .menuvisible {
+  -webkit-transform: translateX(0%) !important;
+          transform: translateX(0%) !important;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  /**/
+}
+
+.nodesktop {
+  display: none !important;
+}
+
+.liuser:hover {
+  background: none !important;
+}
+
+.dropdownbox .user-view {
+  min-width: 200px;
+}
+
+.dropdownbox .user-view,
+.dropdownbox .userView {
+  position: relative;
+  /*padding: ($sidenav-padding * 1) ($sidenav-padding * 1) 0;
+	    margin-bottom: $sidenav-padding / 2;*/
+}
+
+.dropdownbox .user-view > a,
+.dropdownbox .userView > a {
+  height: auto;
+  padding: 0;
+}
+
+.dropdownbox .user-view > a:hover,
+.dropdownbox .userView > a:hover {
+  background-color: transparent;
+}
+
+.dropdownbox .user-view .background,
+.dropdownbox .userView .background {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.dropdownbox .user-view .circle, .dropdownbox .user-view .name, .dropdownbox .user-view .email,
+.dropdownbox .userView .circle,
+.dropdownbox .userView .name,
+.dropdownbox .userView .email {
+  display: block;
+}
+
+.dropdownbox .user-view .circle,
+.dropdownbox .userView .circle {
+  height: 64px;
+  width: 64px;
+}
+
+.dropdownbox .user-view .name,
+.dropdownbox .user-view .email,
+.dropdownbox .userView .name,
+.dropdownbox .userView .email {
+  /* font-size: $sidenav-font-size;
+	      line-height: $sidenav-line-height / 2;*/
+}
+
+.dropdownbox .user-view .name,
+.dropdownbox .userView .name {
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+.dropdownbox .user-view .email,
+.dropdownbox .userView .email {
+  padding-bottom: 16px;
+  font-weight: 400;
+}
+
+/* @include border-radius(5px 10px 15px 20px);*/
+ul li .badge {
+  border-radius: 60%;
+  -webkit-border-radius: 60%;
+  -moz-border-radius: 60%;
+  -ms-border-radius: 60%;
+  -o-border-radius: 60%;
+  color: #ffffff;
+  width: 22px;
+  height: 22px !important;
+  min-width: 0;
+  line-height: 22px;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-right: 2px;
+  padding: 0px;
+}
+
+#dnotificaciones span {
+  display: block;
+  width: 100%;
+  color: #999;
+  font-size: 12px;
+}
+
+.dropdown-button.active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content li {
+  min-height: 0;
+}
+
+.dropdown-content li a {
+  padding: 10px 15px;
+}
+
+.menuleft > li {
+  /**/
+  /*border-bottom: 1px solid #999;*/
+}
+
+.menuleft > li > a {
+  padding: 0 20px;
+}
+
+.menuleft > li:first-child {
+  padding-left: 20px;
+}
+
+.menuleft > li > i {
+  margin-right: 20px;
+}
+
+.menuleft > li .material-icons {
+  margin-right: 20px !important;
+}
+
+.menuleft .divider {
+  margin-top: 0px;
+}
+
+#dnotificaciones li:first-child a {
+  background: none;
+}
+
+#dnotificaciones li:first-child a:hover {
+  background: #fff;
+  color: #1976D2;
+}
+
+#dnotificaciones li:first-child a:hover span {
+  color: #666;
+}
+
+#dnotificaciones li a.activo {
+  background: #eee;
+}
+
+#dnotificaciones li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #1976D2;
+}
+
+#dnotificaciones li a:hover span {
+  color: #666;
+}
+/*# sourceMappingURL=first.css.map */

@@ -120,8 +120,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 	  }
 	}
 }
+
+.card-list{
+	li{
+		padding-bottom: 5px;
+		padding-left: 2px;
+	}
+}
+
+
 .mod {
-	height:250px;
+	height:$card-content_size;
 	overflow: hidden;
 	a {
 		display: block;
@@ -179,7 +188,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 		}
 	}
 	.card-content {
-		padding:7px 24px 5px;
+		padding:6px $card-padding 4px;
 		span {
 			margin: 0px;
 		}
@@ -189,6 +198,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 				right: 10px;
 				bottom: 6px;
 			}
+		}
+		.col-width{
+			min-width: 100%;
+			width: 100%;
+			height: $card-content_size;
 		}
 	}
 	.app-item {
@@ -1161,7 +1175,7 @@ table.dataTable thead .sorting_desc {
 				}
 			}
 		}
-		/*box-shadow: none;*/
+		/*box-shadow: none-;*/
 		.collapsible-body {
 			padding:0px !important;
 		}

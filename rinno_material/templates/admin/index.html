@@ -19,12 +19,12 @@
         <div class="card">
           <div class="card-content mod">
             <span class="card-title grey-text text-darken-4">{{ app.name }}</span>
-            <div class="col" style="column-count: 2">
-                <ul>
+            <div class="col col-width" style="column-count: 2">
+                <ul class="card-list">
                     {% for model in app.models %}    
                     <li>
-                        <a class="truncate" href="{{ model.admin_url }}">
-                        {{ model.name }}
+                        <a class="hvr-fade truncate" href="{{ model.admin_url }}">
+                        - {{ model.name }}
                         </a>
                     </li>
                     {% endfor %}

@@ -32,7 +32,7 @@
 
 
 
-// 1. Colores
+// 1. Colores .boxnavinterior .side-nav {
 // ==========================================================================
 
 $primary-color: color("light-blue", "darken-4") !default;
@@ -93,10 +93,11 @@ $button-floating-radius: 50% !default;
 // 4. Cards
 // ==========================================================================
 
-$card-padding: 24px !default;
+$card-padding: 15px !default;
 $card-bg-color: #fff !default;
 $card-link-color: color("orange", "accent-2") !default;
 $card-link-color-light: lighten($card-link-color, 20%) !default;
+$card-content_size: 250px;
 
 
 // 5. Carousel
