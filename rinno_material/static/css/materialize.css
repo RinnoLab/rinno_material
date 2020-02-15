@@ -4744,7 +4744,7 @@ small {
   transition: -webkit-box-shadow .25s;
   transition: box-shadow .25s;
   transition: box-shadow .25s, -webkit-box-shadow .25s;
-  padding: 24px;
+  padding: 15px;
   margin: 0.5rem 0 1rem 0;
   border-radius: 2px;
   background-color: #fff;
@@ -4883,11 +4883,11 @@ small {
   bottom: 0;
   left: 0;
   max-width: 100%;
-  padding: 24px;
+  padding: 15px;
 }
 
 .card .card-content {
-  padding: 24px;
+  padding: 15px;
   border-radius: 0 0 2px 2px;
 }
 
@@ -4910,7 +4910,7 @@ small {
   position: relative;
   background-color: inherit;
   border-top: 1px solid rgba(160, 160, 160, 0.2);
-  padding: 16px 24px;
+  padding: 16px 15px;
 }
 
 .card .card-action:last-child {
@@ -4919,7 +4919,7 @@ small {
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
   color: #ffab40;
-  margin-right: 24px;
+  margin-right: 15px;
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
   text-transform: uppercase;
@@ -4930,7 +4930,7 @@ small {
 }
 
 .card .card-reveal {
-  padding: 24px;
+  padding: 15px;
   position: absolute;
   background-color: #fff;
   width: 100%;
@@ -14738,6 +14738,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
   text-decoration: underline;
 }
 
+.card-list li {
+  padding-bottom: 5px;
+  padding-left: 2px;
+}
+
 .mod {
   height: 250px;
   overflow: hidden;
@@ -14793,7 +14798,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 }
 
 .mod .card-content {
-  padding: 7px 24px 5px;
+  padding: 6px 15px 4px;
 }
 
 .mod .card-content span {
@@ -14804,6 +14809,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
   position: absolute;
   right: 10px;
   bottom: 6px;
+}
+
+.mod .card-content .col-width {
+  min-width: 100%;
+  width: 100%;
+  height: 250px;
 }
 
 .mod .app-item {

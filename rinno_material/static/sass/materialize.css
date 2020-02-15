@@ -14740,6 +14740,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 
 .card-list li {
   padding-bottom: 5px;
+  padding-left: 2px;
 }
 
 .mod {
@@ -14811,8 +14812,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 }
 
 .mod .card-content .col-width {
-  max-width: 100%;
+  min-width: 100%;
   width: 100%;
+  height: 250px;
 }
 
 .mod .app-item {
