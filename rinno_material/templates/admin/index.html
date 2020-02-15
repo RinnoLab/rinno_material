@@ -24,7 +24,7 @@
                     {% for model in app.models %}    
                     <li>
                         <a class="hvr-fade truncate" href="{{ model.admin_url }}">
-                        - {{ model.name }}
+                        <strong>-</strong> {{ model.name }}
                         </a>
                     </li>
                     {% endfor %}

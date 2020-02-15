@@ -14738,12 +14738,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
   text-decoration: underline;
 }
 
-.card-list {
-  width: 100%;
-}
-
-.card-list li {
-  padding-bottom: 5px;
+.card-list li a {
+  padding-top: 3px;
+  padding-bottom: 3px;
   padding-left: 2px;
 }
 
@@ -14806,7 +14803,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
   width: 100%;
   -webkit-column-count: 2;
           column-count: 2;
-  height: 250px;
+  height: 188px;
+  overflow: auto;
 }
 
 .mod .card-content {
@@ -14845,6 +14843,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 
 .mod .card-title {
   margin-bottom: 0px;
+  border-bottom: 1px dashed #d9d9d9;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .mod .card-reveal {
@@ -16584,6 +16585,14 @@ select {
 @media only screen and (min-width: 320px) and (max-width: 719px) {
   .mod a {
     line-height: 40px;
+  }
+  .mod .col-width {
+    min-width: 100%;
+    width: 100%;
+    -webkit-column-count: 1;
+            column-count: 1;
+    height: 188px;
+    overflow: auto;
   }
   .nmb {
     display: none !important;
