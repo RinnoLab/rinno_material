@@ -1,4 +1,7 @@
 
+// Variables;
+@import "components/variables";
+
 html,
 body {
 	margin:0;
@@ -202,6 +205,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 		.col-width{
 			min-width: 100%;
 			width: 100%;
+			column-count: 2;
 			height: $card-content_size;
 		}
 	}
