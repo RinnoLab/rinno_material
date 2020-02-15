@@ -1151,7 +1151,7 @@ table.dataTable thead .sorting_desc {
 		width:15.5%;
 		max-width: 300px;
 		height: 100vh;
-		top:64px;
+		top:$navbar-height;
 		transform:translateX(0%);
 		z-index: 1;
 		li {
