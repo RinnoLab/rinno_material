@@ -14738,6 +14738,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
   text-decoration: underline;
 }
 
+.card-list {
+  width: 100%;
+}
+
 .card-list li {
   padding-bottom: 5px;
   padding-left: 2px;
