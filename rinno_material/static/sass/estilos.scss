@@ -187,6 +187,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 			opacity: 0.8;
 		}
 	}
+	
+	.col-width{
+		min-width: 100%;
+		width: 100%;
+		column-count: 2;
+		height: $card-content_size;
+	}
+
 	.card-content {
 		padding:6px $card-padding 4px;
 		span {
@@ -199,12 +207,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 				bottom: 6px;
 			}
 		}
-		.col-width{
-			min-width: 100%;
-			width: 100%;
-			column-count: 2;
-			height: $card-content_size;
-		}
+		
 	}
 	.app-item {
 		padding-left: 0px;
