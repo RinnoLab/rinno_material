@@ -111,7 +111,7 @@
     <header id="header" class="navbar-fixed">
         <!--menu top -->
         <nav class="menutop">
-          <div class="row">
+          <div class="row z-depth-2">
             <div class="col s12">
               <div class="nav-wrapper">
                 <a id="iconmenu" href="#" data-activates="slide-out" class="btnmenu button-collapse">
@@ -119,7 +119,7 @@
                 </a>
                 <!--{% block branding %}{% endblock %}-->
                 <a href="/admin/" class="brand-logo" title="{% trans 'Administration' %}">
-                    <img src="{{ request|get_org_icon }}" alt="{% trans 'Administration' %}">
+                    <img src="{{ request|get_org_icon }}" onerror="this.src='img/logo.png'" alt="{% trans 'Administration' %}">
                 </a>
 
                 <!-- lista menu-->

@@ -19,53 +19,22 @@
         <div class="card">
           <div class="card-content mod">
             <span class="card-title grey-text text-darken-4">{{ app.name }}</span>
-
-            {% for model in app.models %}
-                <span class="truncate">
-                <a class="hvr-forward truncate" href="{{ model.admin_url }}">
-                    {{ model.icon }}
-                    {{ model.name }}
-                </a>
-                </span>
-            {% endfor %}
+            <div class="col" style="column-count: 2"></div>
+                <ul>
+                    {% for model in app.models %}    
+                    <li>
+                        <a class="truncate" href="{{ model.admin_url }}">
+                        {{ model.name }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
           </div>
           <div class="card-action">
           </div>
         </div>
       </div>
-       
- <!--        <div class="col s12 m4 l3 test">
-            <div class="card mod">
-                <div class="card-image waves-effect waves-block waves-light activator hvr-push">
-                    {{ app.app_icon }}
-                     <i class="material-icons">build</i>
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4 truncate"> 
-                        {{ app.name }}
-                    </span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">
-                        {{ app.name }}<i class="material-icons right">close</i>
-                    </span>
-                     {% for model in app.models %}
-                        <div class="app-item col s12 m12 l6">  
-                            <span class="truncate">
-                                <a class="hvr-forward truncate" href="{{ model.admin_url }}">
-                                    {{ model.icon }}
-                                    {{ model.name }}
-                                </a>
-                            </span>
-                            {% if model.add_url %}
-                                <a href="{{ model.add_url }}" class="addlink" title="agregar"></a>
-                                {% else %}
-                            {% endif %}
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div> -->
         
     {% endfor %}   
      
