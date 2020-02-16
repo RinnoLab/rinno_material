@@ -14745,7 +14745,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 }
 
 .mod {
-  height: 250px;
+  height: 230px;
   overflow: hidden;
 }
 
@@ -14803,7 +14803,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
   width: 100%;
   -webkit-column-count: 2;
           column-count: 2;
-  height: 188px;
+  height: 168px;
   overflow: auto;
 }
 
@@ -14846,6 +14846,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
   border-bottom: 1px dashed #d9d9d9;
   margin-bottom: 10px;
   padding-bottom: 5px;
+  font-size: 20px;
 }
 
 .mod .card-reveal {
@@ -16591,7 +16592,7 @@ select {
     width: 100%;
     -webkit-column-count: 1;
             column-count: 1;
-    height: 188px;
+    height: 168px;
     overflow: auto;
   }
   .nmb {
