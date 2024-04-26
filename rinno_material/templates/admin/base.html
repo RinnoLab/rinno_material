@@ -2,19 +2,19 @@
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
-<title>{% block title %}{% endblock %}</title>
-<!--<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}" />
+    <title>{% block title %}{% endblock %}</title>
+    <!--<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}" />
 
-{% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" />{% endif %}
+    {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" />{% endif %}
 
-{% block responsive %}
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive.css" %}" />
-    {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive_rtl.css" %}" />{% endif %}
-{% endblock %}-->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-{% block extrastyle %}{% endblock %}
-{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
+    {% block responsive %}
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive.css" %}" />
+        {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive_rtl.css" %}" />{% endif %}
+    {% endblock %}-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    {% block extrastyle %}{% endblock %}
+    {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
 
     <!--CSS Rinno theme -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" media="screen">
@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
     <link rel=”shortcut icon” href="{% static 'favicon.ico' %}"/>
     <!--CSS Rinno theme -->
-{% block extrahead %}{% endblock %}
+    {% block extrahead %}{% endblock %}
     <!--JS Rinno theme -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
@@ -34,66 +34,66 @@
     <script>
         var OneSignal = window.OneSignal || [];
         OneSignal.push(function() {
-          OneSignal.init({
-              appId: "{{ request|get_onesignal_app_id }}",
-          });
-          OneSignal.isPushNotificationsEnabled(function(isEnabled) {
-              if (isEnabled) {
-                  OneSignal.getUserId(function(userId) {
-                      var data = {}
-                      $.ajax({
-                           type: "GET",
-                           url: '/rinno_material/update_player_id/' + userId + '/',
-                           data: data,
-                           success: function(msg){
-                               console.log(msg.onesignal_player_id);
-                           }
-                      });
-                  });
+            OneSignal.init({
+                appId: "{{ request|get_onesignal_app_id }}",
+            });
+            OneSignal.isPushNotificationsEnabled(function(isEnabled) {
+                if (isEnabled) {
+                    OneSignal.getUserId(function(userId) {
+                        var data = {}
+                        $.ajax({
+                            type: "GET",
+                            url: '/rinno_material/update_player_id/' + userId + '/',
+                            data: data,
+                            success: function(msg){
+                                console.log(msg.onesignal_player_id);
+                            }
+                        });
+                    });
 
-              }
-          });
+                }
+            });
         });
     </script>
     {% endif %}
 
     <!--JS Rinno theme <link rel="stylesheet" type="text/css" href="{% static "css/forms.css" %}" />-->
     {% block theme %}
-       {% if request.user.is_authenticated %}
-           <style type="text/css">
-               nav {
-                  background-color: {% get_org_style request 'navigation' '#1f69cc;' %};
-               }
-               .page-footer {
-                    background-color: {% get_org_style request 'footer' '#1f69cc;' %};
-               }
-               #slide-out .collapsible .collapsible-header.active {
-                   background-color: {% get_org_style request 'sidebar' '#1f69cc;' %};
-               }
-               #slide-out2 {
-                   background-color: {% get_org_style request 'sidebar' '#1f69cc;' %};
-               }
-               .dropdown-content li a {
-                    color: {% get_org_style request 'dropdown' '#1f69cc;' %};
-               }
-               .mod .card-image i {
-                    color: {% get_org_style request 'link' '#1f69cc;' %};
-               }
-               a {
-                    color: {% get_org_style request 'link' '#1f69cc;' %};
-               }
-               #slide-out2 .dropdown-content {
-                   border-color: {% get_org_style request 'navigation' '#1f69cc;' %};
-               }
-               #result_list_paginate  span .current {
-                    background-color: {% get_org_style request 'navigation' '#1f69cc;' %};
-               }
-               .wrap #changelist-filter h3:first-child  {
-                    background-color: {% get_org_style request 'navigation' '#1f69cc;' %};
-               }
+    {% if request.user.is_authenticated %}
+    <style type="text/css">
+        nav {
+            background-color: {% get_org_style request 'navigation' '#1f69cc;' %};
+        }
+        .page-footer {
+            background-color: {% get_org_style request 'footer' '#1f69cc;' %};
+        }
+        #slide-out .collapsible .collapsible-header.active {
+            background-color: {% get_org_style request 'sidebar' '#1f69cc;' %};
+        }
+        #slide-out2 {
+            background-color: {% get_org_style request 'sidebar' '#1f69cc;' %};
+        }
+        .dropdown-content li a {
+            color: {% get_org_style request 'dropdown' '#1f69cc;' %};
+        }
+        .mod .card-image i {
+            color: {% get_org_style request 'link' '#1f69cc;' %};
+        }
+        a {
+            color: {% get_org_style request 'link' '#1f69cc;' %};
+        }
+        #slide-out2 .dropdown-content {
+            border-color: {% get_org_style request 'navigation' '#1f69cc;' %};
+        }
+        #result_list_paginate  span .current {
+            background-color: {% get_org_style request 'navigation' '#1f69cc;' %};
+        }
+        .wrap #changelist-filter h3:first-child  {
+            background-color: {% get_org_style request 'navigation' '#1f69cc;' %};
+        }
 
-           </style>
-       {% endif %}
+    </style>
+    {% endif %}
     {% endblock theme %}
 
 
@@ -104,165 +104,175 @@
 
 <!-- Container -->
 {% block wrapint %}
- <div id="wrap" class="wrap">
+<div id="wrap" class="wrap">
     {% if not is_popup %}
     {% block header %}
     <!-- Header -->
     <header id="header" class="navbar-fixed">
         <!--menu top -->
         <nav class="menutop">
-          <div class="row z-depth-2">
-            <div class="col s12">
-              <div class="nav-wrapper">
-                <a id="iconmenu" href="#" data-activates="slide-out" class="btnmenu button-collapse">
-                  <i class="material-icons">menu</i>
-                </a>
-                <!--{% block branding %}{% endblock %}-->
-                <a href="/admin/" class="brand-logo" title="{% trans 'Administration' %}">
-                    <img src="{{ request|get_org_icon }}" onerror="this.src='/static/img/logoRinno.png'" alt="{% trans 'Administration' %}">
-                </a>
+            <div class="row z-depth-2">
+                <div class="col s12">
+                    <div class="nav-wrapper">
+                        <a id="iconmenu" href="#" data-activates="slide-out" class="btnmenu button-collapse">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <!--{% block branding %}{% endblock %}-->
+                        <a href="/admin/" class="brand-logo" title="{% trans 'Administration' %}">
+                            <img src="{{ request|get_org_icon }}" onerror="this.src='/static/img/logoRinno.png'" alt="{% trans 'Administration' %}">
+                        </a>
 
-                <!-- lista menu-->
-                <div class="boxmenuopciones">
-                  <ul id="menuopciones" class="right hide-on-med-and-down dropdownbox">
-                      {% with request|get_organizations_list as organizations_list %}
-                      {% if organizations_list.exists and organizations_list.count > 1 %}
-                      <!-- Dropdown -->
-                      <li >
-                        <a class="dropdown-button waves-effect cempresa" href="#!" data-activates="dproyecto" title="Proyecto">
-                          <i class="material-icons nodesktop">&#xE7EE;</i>
-                          <span class="nmobile">
+                        <!-- lista menu-->
+                        <div class="boxmenuopciones">
+                            <ul id="menuopciones" class="right hide-on-med-and-down dropdownbox">
+                                {% with request|get_organizations_list as organizations_list %}
+                                {% if organizations_list.exists and organizations_list.count > 1 %}
+                                <!-- Dropdown -->
+                                <li >
+                                    <a class="dropdown-button waves-effect cempresa" href="#!" data-activates="dproyecto" title="Proyecto">
+                                        <i class="material-icons nodesktop">&#xE7EE;</i>
+                                        <span class="nmobile">
                             {% trans "Change project" %}
                             <i class="material-icons right">arrow_drop_down</i>
                           </span>
-                        </a>
-                        <ul id="dproyecto" class="dropdown-content  ">
-                          {% if site_url %}
-                          {% block back_link %}
-                          {% for organization in organizations_list %}
-                          <li>
-                              <a class="collapsible-header" href="{% url 'set_organization' organization.id %}">{{ organization.name }}</a>
-                          </li>
-                          {% endfor %}
-                          {% endblock %}
-                          {% endif %}
-                        </ul>
-                      </li><!-- Dropdown -->
-                      {% endif %}
-                      {% endwith %}
-
-                    <li>
-                      <a class="dropdown-button waves-effect dhover" href="#!" title="Notificaciones" data-activates="dnotificaciones">
-                        <span class="badge red">7</span>
-                        <i class="material-icons hvr-wobble-bottom">&#xE7F4;</i>
-                      </a>
-                      <ul id="dnotificaciones" class="dropdown-content">
-                        <li><a href="#!">Notificaciones</a></li>
-                        <li class="divider"></li>
-                        <li>
-                          <a class="activo" href="#!">Ejemplo Notificación 1
-                            <span>Hace 5 horas</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a class="" href="#!">Ejemplo Notificación 2
-                           <span>8 Agosto 2017</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a class="activo" href="#!">Ejemplo Notificación 5
-                            <span>15 Agosto 2017</span>
-                          </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="#!">Ver todo</a></li>
-                      </ul>
-                    </li>
-                    <!-- Dropdown -->
-                    <li>
-                      <a class="dropdown-button waves-effect hvr-push dhover" href="#!" data-activates="dperfil" title="Perfil">
-                      <i class="material-icons">&#xE7FD;</i>
-                      </a>
-                       {% block usertools %}
-                                {% if has_permission %}
-
-                      <ul id="dperfil" class="dropdown-content ">
-                        <li class="liuser">
-                          <div class="user-view">
-                            <div class="background">
-                                <img class="background" src="{% static 'img/sample-1.jpg' %}">
-                            </div>
-
-
-                            {% block userphoto %}
-                                {% if user.photo.url %}
-                                    <a href="#"><img class="circle" src="{% static 'img/yuna.jpg' %}"></a>
-                                {% else %}
-                            <a href="#"><img class="circle" src="{% static 'img/yuna.jpg' %}"></a>
-                            {% endif %}
-                            {% endblock %}
-                            <a href="#!name"><span class="white-text name">{{ request.user.get_username|title }}
-                            {% firstof user.get_short_name user.get_username %}</span></a>
-                            <a href="#!email"><span class="white-text email">{{ request.user.email }}</span></a>
-                          </div>
-                        </li>
-                        {% if user.has_usable_password %}
-                        <li>
-                            <a href="{% url 'admin:password_change' %}">Editar</a>
-                        </li>
-                        {% endif %}
-                        {% if user.is_authenticated %}
-                        <li><a href="{% url 'admin:logout' %}">Cerrar</a></li>
-                        {% endif %}
-                      </ul>
-
+                                    </a>
+                                    <ul id="dproyecto" class="dropdown-content  ">
+                                        {% if site_url %}
+                                        {% block back_link %}
+                                        {% for organization in organizations_list %}
+                                        <li>
+                                            <a class="collapsible-header" href="{% url 'set_organization' organization.id %}">{{ organization.name }}</a>
+                                        </li>
+                                        {% endfor %}
+                                        {% endblock %}
+                                        {% endif %}
+                                    </ul>
+                                </li><!-- Dropdown -->
                                 {% endif %}
-                            {% endblock %}
-                    </li><!-- Dropdown -->
+                                {% endwith %}
+
+                                <li>
+                                    <a class="dropdown-button waves-effect dhover" href="#!" title="Notificaciones" data-activates="dnotificaciones">
+                                        <span class="badge red">7</span>
+                                        <i class="material-icons hvr-wobble-bottom">&#xE7F4;</i>
+                                    </a>
+                                    <ul id="dnotificaciones" class="dropdown-content">
+                                        <li><a href="#!">Notificaciones</a></li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a class="activo" href="#!">Ejemplo Notificación 1
+                                                <span>Hace 5 horas</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="#!">Ejemplo Notificación 2
+                                                <span>8 Agosto 2017</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="activo" href="#!">Ejemplo Notificación 5
+                                                <span>15 Agosto 2017</span>
+                                            </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#!">Ver todo</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Dropdown -->
+                                <li>
+                                    <a class="dropdown-button waves-effect hvr-push dhover" href="#!" data-activates="dperfil" title="Perfil">
+                                        <i class="material-icons">&#xE7FD;</i>
+                                    </a>
+                                    {% block usertools %}
+                                    {% if has_permission %}
+
+                                    <ul id="dperfil" class="dropdown-content ">
+                                        <li class="liuser">
+                                            <div class="user-view">
+                                                <div class="background">
+                                                    <img class="background" src="{% static 'img/sample-1.jpg' %}">
+                                                </div>
 
 
-                    {% block userlinks %}
-                        {% if user.is_active and user.is_staff %}
-                            {% url 'django-admindocs-docroot' as docsroot %}
-                            {% if docsroot %}
+                                                {% block userphoto %}
+                                                {% if user.photo.url %}
+                                                <a href="#"><img class="circle" src="{% static 'img/yuna.jpg' %}"></a>
+                                                {% else %}
+                                                <a href="#"><img class="circle" src="{% static 'img/yuna.jpg' %}"></a>
+                                                {% endif %}
+                                                {% endblock %}
+                                                <a href="#!name"><span class="white-text name">{{ request.user.get_username|title }}
+                            {% firstof user.get_short_name user.get_username %}</span></a>
+                                                <a href="#!email"><span class="white-text email">{{ request.user.email }}</span></a>
+                                            </div>
+                                        </li>
+                                        {% if user.has_usable_password %}
+                                        <li>
+                                            <a href="{% url 'admin:password_change' %}">Editar</a>
+                                        </li>
+                                        {% endif %}
+                                        {% if user.is_authenticated %}
+                                        <li><a href="{% url 'admin:logout' %}">Cerrar</a></li>
+                                        {% endif %}
+                                    </ul>
+
+                                    {% endif %}
+                                    {% endblock %}
+                                </li><!-- Dropdown -->
+
+
+                                {% block userlinks %}
+                                {% if user.is_active and user.is_staff %}
+                                {% url 'django-admindocs-docroot' as docsroot %}
+                                {% if docsroot %}
                                 <li>
                                     <a href="{{ docsroot }}">{% trans 'Documentation' %}</a>
                                 </li>
-                            {% endif %}
-                        {% endif %}
-                         {% if user.is_active and user.is_staff %}
-                            <li>
-                                <a href="{% url 'admin:password_change' %}" title="Configuración" class="waves-effect hvr-push">
-                                    <i class="material-icons">&#xE8B8;</i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'admin:logout' %}" title="{% trans 'Log out' %}" class="waves-effect">
-                                  <i class="material-icons"></i>
-                                </a>
-                              </li>
+                                {% endif %}
+                                {% endif %}
+                                {% if user.is_active and user.is_staff %}
+                                <li>
+                                    <a href="{% url 'admin:password_change' %}" title="Configuración" class="waves-effect hvr-push">
+                                        <i class="material-icons">&#xE8B8;</i>
+                                    </a>
+                                </li>
+                                <!--<li>
+                                    <a href="{% url 'admin:logout' %}" title="{% trans 'Log out' %}" class="waves-effect">
+                                        <i class="material-icons"></i>
+                                    </a>
+                                </li>-->
+                                <li>
+                                    <form method="post" action="{% url 'admin:logout' %}" class="waves-effect">
+                                        {% csrf_token %}
+                                        <button type="submit" style="background: none;border: 0">
+                                            <i class="material-icons"></i>
+                                        </button>
+                                    </form>
+                                </li>
 
 
 
-                            {% url 'django-admindocs-docroot' as docsroot %}
-                            {% if docsroot %}
+                                {% url 'django-admindocs-docroot' as docsroot %}
+                                {% if docsroot %}
                                 <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
-                            {% endif %}
-                        {% endif %}
-
-                        <a class="test" href="{% url 'admin:logout' %}"></a>
-                        {% endblock userlinks %}
+                                {% endif %}
+                                {% endif %}
 
 
-                  </ul>
-                </div><!-- lista menu-->
-                <a id="moresetting" href="#" data-activates="slide-out2" class="btnmenu button-collapse2 hvr-push">
-                  <i class="material-icons">&#xE5D4;</i>
-                </a>
-              </div>
+
+
+                                {% endblock userlinks %}
+
+
+                            </ul>
+                        </div><!-- lista menu-->
+                        <a id="moresetting" href="#" data-activates="slide-out2" class="btnmenu button-collapse2 hvr-push">
+                            <i class="material-icons">&#xE5D4;</i>
+                        </a>
+                    </div>
+                </div>
+                {% block nav-global %}{% endblock %}
             </div>
-        {% block nav-global %}{% endblock %}
-          </div>
         </nav><!--menu top -->
 
     </header>
@@ -272,35 +282,35 @@
     {% block menuside %}
     {% if not is_popup %}
     <ul id="slide-out" class="side-nav menuleft">
-      <li class="menutitle bold">
-        Menú
-      </li>
-      <li class="divider"></li>
-      {% for app in app_list %}
-      <li>
-        <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
-          <li>
-            <a class="collapsible-header{% if app.active %} active{% endif %} hvr-backward">
-                 {{ app.app_icon }}
-                 {{ app.name|truncatechars:23 }}
-             </a>
-            <div class="collapsible-body" {% if app.active %}style="display:block" {% endif %}>
-              <ul>
-                {% for model in app.models %}
-                <li class="{% if model.active %}active{% endif %}">
-                  <a href="{{ model.admin_url }}">
-                             {{ model.icon }}
-                             {% trans model.name %}
-                         </a>
+        <li class="menutitle bold">
+            Menú
+        </li>
+        <li class="divider"></li>
+        {% for app in app_list %}
+        <li>
+            <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+                <li>
+                    <a class="collapsible-header{% if app.active %} active{% endif %} hvr-backward">
+                        {{ app.app_icon }}
+                        {{ app.name|truncatechars:23 }}
+                    </a>
+                    <div class="collapsible-body" {% if app.active %}style="display:block" {% endif %}>
+                        <ul>
+                            {% for model in app.models %}
+                            <li class="{% if model.active %}active{% endif %}">
+                                <a href="{{ model.admin_url }}">
+                                    {{ model.icon }}
+                                    {% trans model.name %}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-      {% endfor %}
-    {% endif %}
+            </ul>
+        </li>
+        {% endfor %}
+        {% endif %}
 
     </ul>
     {% endblock menuside %}
@@ -319,11 +329,11 @@
     {% endif %}
 
     {% block messages1 %}
-        {% if messages %}
-        <ul class="messagelist">{% for message in messages %}
-          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|capfirst }}</li>
+    {% if messages %}
+    <ul class="messagelist">{% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|capfirst }}</li>
         {% endfor %}</ul>
-        {% endif %}
+    {% endif %}
     {% endblock messages1 %}
 
 
@@ -346,26 +356,26 @@
     <!--#footer-->
     <footer>
         <div id="footer" class="page-footer">
-          <div class=" nptb">
-            <div class="container nptb ">
-              <div class="row nptb nmb">
-                <div class="col l12 nptb pf">
+            <div class=" nptb">
+                <div class="container nptb ">
+                    <div class="row nptb nmb">
+                        <div class="col l12 nptb pf">
 
-                     <p><img src="{% static 'img/logoRinno.png' %}" alt="{% trans 'Administration' %}"> | V 2.0.1</p>
+                            <p><img src="{% static 'img/logoRinno.png' %}" alt="{% trans 'Administration' %}"> | V 2.0.1</p>
 
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
     </footer><!--#footer-->
     {% endblock footer %}
-        {% endif %}
+    {% endif %}
 </div>
 <!-- END Container -->
- {% endblock %}
+{% endblock %}
 <!--block para login-->
-    {% block content2 %}{% endblock %}<!--/block para login-->
+{% block content2 %}{% endblock %}<!--/block para login-->
 
 </body>
 </html>
